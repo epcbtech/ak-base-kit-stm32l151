@@ -540,8 +540,8 @@ int32_t shell_lcd(uint8_t* argv) {
 
 	case 't':
 		/* ak logo */
-	#define AK_LOGO_AXIS_X	23
-	#define AK_LOGO_TEXT	(AK_LOGO_AXIS_X + 4)
+#define AK_LOGO_AXIS_X	23
+#define AK_LOGO_TEXT	(AK_LOGO_AXIS_X + 4)
 
 		view_render.setTextSize(1);
 		view_render.setTextColor(WHITE);
@@ -897,7 +897,7 @@ int32_t shell_psv(uint8_t* argv) {
 }
 
 int32_t shell_buzzer(uint8_t* argv) {
-	#if defined (TASK_BUZZER_EN)
+#if defined (TASK_BUZZER_EN)
 	switch (*(argv + 5)) {
 	case 'i': {
 		BUZZER_Init();
@@ -927,7 +927,7 @@ int32_t shell_buzzer(uint8_t* argv) {
 		LOGIN_PRINT("4. \"beep 3\"                           : buzzer play tones super mario bros \n");
 		break;
 	}
-	#endif
+#endif
 
 	return 0;
 }

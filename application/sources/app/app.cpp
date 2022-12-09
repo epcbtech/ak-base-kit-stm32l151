@@ -166,10 +166,10 @@ int main_app() {
 	button_enable(&btn_down);
 
 	/* siren init */
-	#if defined (TASK_BUZZER_EN)
+#if defined (TASK_BUZZER_EN)
 	BUZZER_Init();
 	BUZZER_PlayTones(tones_startup);
-	#endif
+#endif
 
 	/* get boot share data */
 	flash_read(APP_FLASH_INTTERNAL_SHARE_DATA_SECTOR_1, reinterpret_cast<uint8_t*>(&boot_app_share_data), sizeof(boot_app_share_data_t));
@@ -190,65 +190,65 @@ int main_app() {
 	APP_PRINT ("Init mbMaster >> ");
 	switch (flag_init)
 	{
-		case MB_ENOERR:
-			APP_PRINT ("No error\n");
-			break;
-		case MB_ENOREG:
-			APP_PRINT ("Illegal register address\n");
-			break;
-		case MB_EINVAL:
-			APP_PRINT ("Illegal argument\n");
-			break;
-		case MB_EPORTERR:
-			APP_PRINT ("Porting layer error\n");
-			break;
-		case MB_ENORES:
-			APP_PRINT ("Insufficient resources\n");
-			break;
-		case MB_EIO:
-			APP_PRINT ("I/O error\n");
-			break;
-		case MB_EILLSTATE:
-			APP_PRINT ("Protocol stack in illegal state\n");
-			break;
-		case MB_EAGAIN:
-			APP_PRINT ("Retry I/O operation\n");
-			break;
-		case MB_ETIMEDOUT:
-			APP_PRINT ("Timeout error occurred\n");
-			break;
-		case MB_EX_ILLEGAL_FUNCTION:
-			APP_PRINT ("Illegal function exception\n");
-			break;
-		case MB_EX_ILLEGAL_DATA_ADDRESS:
-			APP_PRINT ("Illegal data address\n");
-			break;
-		case MB_EX_ILLEGAL_DATA_VALUE:
-			APP_PRINT ("Illegal data value\n");
-			break;
-		case MB_EX_SLAVE_DEVICE_FAILURE:
-			APP_PRINT ("Slave device failure\n");
-			break;
-		case MB_EX_ACKNOWLEDGE:
-			APP_PRINT ("Slave acknowledge\n");
-			break;
-		case MB_EX_SLAVE_BUSY:
-			APP_PRINT ("Slave device busy\n");
-			break;
-		case MB_EX_MEMORY_PARITY_ERROR:
-			APP_PRINT ("Memory parity error\n");
-			break;
-		case MB_EX_GATEWAY_PATH_UNAVAILABLE:
-			APP_PRINT ("Gateway path unavailable\n");
-			break;
-		case MB_EX_GATEWAY_TARGET_FAILED:
-			APP_PRINT ("Gateway target device failed to respond\n");
-			break;
+	case MB_ENOERR:
+		APP_PRINT ("No error\n");
+		break;
+	case MB_ENOREG:
+		APP_PRINT ("Illegal register address\n");
+		break;
+	case MB_EINVAL:
+		APP_PRINT ("Illegal argument\n");
+		break;
+	case MB_EPORTERR:
+		APP_PRINT ("Porting layer error\n");
+		break;
+	case MB_ENORES:
+		APP_PRINT ("Insufficient resources\n");
+		break;
+	case MB_EIO:
+		APP_PRINT ("I/O error\n");
+		break;
+	case MB_EILLSTATE:
+		APP_PRINT ("Protocol stack in illegal state\n");
+		break;
+	case MB_EAGAIN:
+		APP_PRINT ("Retry I/O operation\n");
+		break;
+	case MB_ETIMEDOUT:
+		APP_PRINT ("Timeout error occurred\n");
+		break;
+	case MB_EX_ILLEGAL_FUNCTION:
+		APP_PRINT ("Illegal function exception\n");
+		break;
+	case MB_EX_ILLEGAL_DATA_ADDRESS:
+		APP_PRINT ("Illegal data address\n");
+		break;
+	case MB_EX_ILLEGAL_DATA_VALUE:
+		APP_PRINT ("Illegal data value\n");
+		break;
+	case MB_EX_SLAVE_DEVICE_FAILURE:
+		APP_PRINT ("Slave device failure\n");
+		break;
+	case MB_EX_ACKNOWLEDGE:
+		APP_PRINT ("Slave acknowledge\n");
+		break;
+	case MB_EX_SLAVE_BUSY:
+		APP_PRINT ("Slave device busy\n");
+		break;
+	case MB_EX_MEMORY_PARITY_ERROR:
+		APP_PRINT ("Memory parity error\n");
+		break;
+	case MB_EX_GATEWAY_PATH_UNAVAILABLE:
+		APP_PRINT ("Gateway path unavailable\n");
+		break;
+	case MB_EX_GATEWAY_TARGET_FAILED:
+		APP_PRINT ("Gateway target device failed to respond\n");
+		break;
 		
-		default:
-			break;
+	default:
+		break;
 	}
-	#endif
+#endif
 
 #if defined (TASK_ZIGBEE_EN)
 	Serial2.begin();

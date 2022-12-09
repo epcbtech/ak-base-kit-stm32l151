@@ -30,7 +30,7 @@ void task_if(ak_msg_t* msg) {
 
 	/* UART */
 	else if (msg->if_des_type >= IF_TYPE_UART_GW_MIN &&
-				msg->if_des_type <= IF_TYPE_UART_GW_MAX) {
+			 msg->if_des_type <= IF_TYPE_UART_GW_MAX) {
 		if_des_type_uart_handler(msg);
 	}
 }
