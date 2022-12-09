@@ -1,0 +1,2601 @@
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 26
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xFC
+[DBG] [MAC] rx_mac_sequence: 24
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 26
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x8E
+[DBG] [MAC] rx_mac_sequence: 26
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 26
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x2C
+[DBG] [MAC] rx_mac_sequence: 26
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 162
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 28
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x15
+[DBG] [MAC] rx_mac_sequence: 26
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 28
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xFE
+[DBG] [MAC] rx_mac_sequence: 28
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 28
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xF9
+[DBG] [MAC] rx_mac_sequence: 28
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 163
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 30
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xFC
+[DBG] [MAC] rx_mac_sequence: 28
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 30
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x69
+[DBG] [MAC] rx_mac_sequence: 30
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 30
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xD1
+[DBG] [MAC] rx_mac_sequence: 30
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 164
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 32
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xB7
+[DBG] [MAC] rx_mac_sequence: 30
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 32
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xC6
+[DBG] [MAC] rx_mac_sequence: 32
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 32
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xCD
+[DBG] [MAC] rx_mac_sequence: 32
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 165
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 34
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xB0
+[DBG] [MAC] rx_mac_sequence: 32
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 34
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xB6
+[DBG] [MAC] rx_mac_sequence: 34
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 34
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x32
+[DBG] [MAC] rx_mac_sequence: 34
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 166
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 36
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x13
+[DBG] [MAC] rx_mac_sequence: 34
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 36
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xA7
+[DBG] [MAC] rx_mac_sequence: 36
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 36
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xA0
+[DBG] [MAC] rx_mac_sequence: 36
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 167
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 38
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x43
+[DBG] [MAC] rx_mac_sequence: 36
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 38
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x8C
+[DBG] [MAC] rx_mac_sequence: 38
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 38
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xE1
+[DBG] [MAC] rx_mac_sequence: 38
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 168
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 40
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x52
+[DBG] [MAC] rx_mac_sequence: 38
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 40
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x9C
+[DBG] [MAC] rx_mac_sequence: 40
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 40
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xA9
+[DBG] [MAC] rx_mac_sequence: 40
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 169
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 42
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x70
+[DBG] [MAC] rx_mac_sequence: 40
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 42
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xE3
+[DBG] [MAC] rx_mac_sequence: 42
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 42
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x7E
+[DBG] [MAC] rx_mac_sequence: 42
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 170
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 44
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xA1
+[DBG] [MAC] rx_mac_sequence: 42
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 44
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x96
+[DBG] [MAC] rx_mac_sequence: 44
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 44
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x46
+[DBG] [MAC] rx_mac_sequence: 44
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 171
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> FW_PACKED_TIMEOUT
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 1
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x81
+[DBG] [MAC] rx_mac_sequence: 44
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 26
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 1
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_PURE_MSG_IN
+-SIG-> AC_IF_PURE_MSG_IN
+-SIG-> FW_CRENT_APP_FW_INFO_REQ
+-SIG-> AC_IF_COMMON_MSG_OUT
+-SIG-> AC_RF24_IF_COMMON_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_COMMON_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 172
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 3
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x33
+[DBG] [MAC] rx_mac_sequence: 1
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x28
+[DBG] [MAC] rx_mac_sequence: 2
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xE9
+[DBG] [MAC] rx_mac_sequence: 2
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> FW_UPDATE_REQ
+[DBG] firmware_header_file.checksum:1063
+[DBG] firmware_header_file.bin_len:35908
+[DBG] erase temp OK
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 173
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 4
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x99
+[DBG] [MAC] rx_mac_sequence: 2
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 4
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xE0
+[DBG] [MAC] rx_mac_sequence: 4
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 4
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xA2
+[DBG] [MAC] rx_mac_sequence: 4
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 174
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 6
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xCA
+[DBG] [MAC] rx_mac_sequence: 4
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 6
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x5F
+[DBG] [MAC] rx_mac_sequence: 6
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 6
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x8
+[DBG] [MAC] rx_mac_sequence: 6
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 175
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 8
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xCA
+[DBG] [MAC] rx_mac_sequence: 6
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 8
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x44
+[DBG] [MAC] rx_mac_sequence: 8
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 8
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x8
+[DBG] [MAC] rx_mac_sequence: 8
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 176
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 10
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xCA
+[DBG] [MAC] rx_mac_sequence: 8
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 10
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xB0
+[DBG] [MAC] rx_mac_sequence: 10
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 10
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x6E
+[DBG] [MAC] rx_mac_sequence: 10
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 177
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 12
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xC
+[DBG] [MAC] rx_mac_sequence: 10
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 12
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x61
+[DBG] [MAC] rx_mac_sequence: 12
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 12
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x61
+[DBG] [MAC] rx_mac_sequence: 12
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 178
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 14
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xF4
+[DBG] [MAC] rx_mac_sequence: 12
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 14
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xF1
+[DBG] [MAC] rx_mac_sequence: 14
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 14
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x55
+[DBG] [MAC] rx_mac_sequence: 14
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 179
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 15
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 1
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xB3
+[DBG] [MAC] rx_mac_sequence: 14
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 26
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 1
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_PURE_MSG_IN
+-SIG-> AC_IF_PURE_MSG_IN
+-SIG-> FW_CRENT_APP_FW_INFO_REQ
+-SIG-> AC_IF_COMMON_MSG_OUT
+-SIG-> AC_RF24_IF_COMMON_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_COMMON_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 180
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 3
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> FW_PACKED_TIMEOUT
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 16
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x33
+[DBG] [MAC] rx_mac_sequence: 15
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 16
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xB5
+[DBG] [MAC] rx_mac_sequence: 16
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 16
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xE9
+[DBG] [MAC] rx_mac_sequence: 16
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> FW_UPDATE_REQ
+[DBG] firmware_header_file.checksum:1063
+[DBG] firmware_header_file.bin_len:35908
+[DBG] erase temp OK
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 181
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 18
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x99
+[DBG] [MAC] rx_mac_sequence: 16
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 18
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xE0
+[DBG] [MAC] rx_mac_sequence: 18
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 18
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xA2
+[DBG] [MAC] rx_mac_sequence: 18
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 182
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 20
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xCA
+[DBG] [MAC] rx_mac_sequence: 18
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 20
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x5F
+[DBG] [MAC] rx_mac_sequence: 20
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 20
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x8
+[DBG] [MAC] rx_mac_sequence: 20
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 183
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 22
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xCA
+[DBG] [MAC] rx_mac_sequence: 20
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 22
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x44
+[DBG] [MAC] rx_mac_sequence: 22
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 22
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x8
+[DBG] [MAC] rx_mac_sequence: 22
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 184
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 24
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xCA
+[DBG] [MAC] rx_mac_sequence: 22
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 24
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xB0
+[DBG] [MAC] rx_mac_sequence: 24
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 24
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x6E
+[DBG] [MAC] rx_mac_sequence: 24
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 185
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 26
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xC
+[DBG] [MAC] rx_mac_sequence: 24
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 26
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x61
+[DBG] [MAC] rx_mac_sequence: 26
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 26
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x61
+[DBG] [MAC] rx_mac_sequence: 26
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 186
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 28
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xF4
+[DBG] [MAC] rx_mac_sequence: 26
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 28
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xF1
+[DBG] [MAC] rx_mac_sequence: 28
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 28
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x55
+[DBG] [MAC] rx_mac_sequence: 28
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 187
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 30
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xC6
+[DBG] [MAC] rx_mac_sequence: 28
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 30
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x89
+[DBG] [MAC] rx_mac_sequence: 30
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 30
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xB8
+[DBG] [MAC] rx_mac_sequence: 30
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 188
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 32
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xA2
+[DBG] [MAC] rx_mac_sequence: 30
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 32
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x8B
+[DBG] [MAC] rx_mac_sequence: 32
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 32
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xA3
+[DBG] [MAC] rx_mac_sequence: 32
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 189
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 34
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x2D
+[DBG] [MAC] rx_mac_sequence: 32
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 34
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x76
+[DBG] [MAC] rx_mac_sequence: 34
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 34
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x74
+[DBG] [MAC] rx_mac_sequence: 34
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 190
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> FW_PACKED_TIMEOUT
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 35
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 1
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x6A
+[DBG] [MAC] rx_mac_sequence: 34
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 26
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 1
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_PURE_MSG_IN
+-SIG-> AC_IF_PURE_MSG_IN
+-SIG-> FW_CRENT_APP_FW_INFO_REQ
+-SIG-> AC_IF_COMMON_MSG_OUT
+-SIG-> AC_RF24_IF_COMMON_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_COMMON_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 191
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 3
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 36
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x33
+[DBG] [MAC] rx_mac_sequence: 35
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 36
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xE3
+[DBG] [MAC] rx_mac_sequence: 36
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 36
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xE9
+[DBG] [MAC] rx_mac_sequence: 36
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> FW_UPDATE_REQ
+[DBG] firmware_header_file.checksum:1063
+[DBG] firmware_header_file.bin_len:35908
+[DBG] erase temp OK
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 192
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 38
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x99
+[DBG] [MAC] rx_mac_sequence: 36
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 38
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xE0
+[DBG] [MAC] rx_mac_sequence: 38
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 38
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xA2
+[DBG] [MAC] rx_mac_sequence: 38
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 193
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 40
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xCA
+[DBG] [MAC] rx_mac_sequence: 38
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 40
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x5F
+[DBG] [MAC] rx_mac_sequence: 40
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 40
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x8
+[DBG] [MAC] rx_mac_sequence: 40
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 194
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> FW_PACKED_TIMEOUT
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 41
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 1
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x8D
+[DBG] [MAC] rx_mac_sequence: 40
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 26
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 1
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_PURE_MSG_IN
+-SIG-> AC_IF_PURE_MSG_IN
+-SIG-> FW_CRENT_APP_FW_INFO_REQ
+-SIG-> AC_IF_COMMON_MSG_OUT
+-SIG-> AC_RF24_IF_COMMON_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_COMMON_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 195
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 3
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 42
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x33
+[DBG] [MAC] rx_mac_sequence: 41
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 42
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x31
+[DBG] [MAC] rx_mac_sequence: 42
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 42
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xE9
+[DBG] [MAC] rx_mac_sequence: 42
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> FW_UPDATE_REQ
+[DBG] firmware_header_file.checksum:1063
+[DBG] firmware_header_file.bin_len:35908
+[DBG] erase temp OK
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 196
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 44
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x99
+[DBG] [MAC] rx_mac_sequence: 42
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 44
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xE0
+[DBG] [MAC] rx_mac_sequence: 44
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 44
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xA2
+[DBG] [MAC] rx_mac_sequence: 44
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 197
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 46
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xCA
+[DBG] [MAC] rx_mac_sequence: 44
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 46
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x5F
+[DBG] [MAC] rx_mac_sequence: 46
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 46
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x8
+[DBG] [MAC] rx_mac_sequence: 46
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 198
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_PHY_IRQ_RX_DR
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 48
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 0
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0xCA
+[DBG] [MAC] rx_mac_sequence: 46
+nrf_nwk_pdu_malloc(0)
+[DBG] nrf_nwk_pdu_receiving->len: 78
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 48
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 1
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x44
+[DBG] [MAC] rx_mac_sequence: 48
+-SIG-> RF24_MAC_RECV_FRAME
+[DBG] [MAC] st_nrf_mac_msg->hdr.src_mac_addr: 0x0
+[DBG] [MAC] st_nrf_mac_msg->hdr.mac_seq: 48
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_num: 3
+[DBG] [MAC] st_nrf_mac_msg->hdr.frame_seq: 2
+[DBG] [MAC] st_nrf_mac_msg->frame_cs: 0x8
+[DBG] [MAC] rx_mac_sequence: 48
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+-SIG-> RF24_MAC_HANDLE_MSG_IN
+nrf_nwk_pdu_get(0)
+-SIG-> RF24_NWK_RECV_MSG
+[DBG] nrf_nwk_hdr.src_addr: 0x0000
+[DBG] nrf_nwk_hdr.des_addr: 0x0100
+[DBG] nrf_nwk_hdr.type: 2
+[DBG] nrf_nwk_hdr.payload_len: 6
+nrf_nwk_pdu_free(0)
+-SIG-> AC_RF24_IF_COMMON_MSG_IN
+-SIG-> AC_IF_COMMON_MSG_IN
+-SIG-> AC_IF_PURE_MSG_OUT
+-SIG-> AC_RF24_IF_PURE_MSG_OUT
+[NRF_DATA] nrf_set_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_NWK_PURE_MSG_OUT
+nrf_nwk_pdu_malloc(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_des_nwk_addr(3C 3C 3C 00 00)
+-SIG-> RF24_MAC_HANDLE_MSG_OUT
+[DBG] [MAC] set_mac_state -> 1
+[DBG] [PHY] nrf_phy_switch_ptx_mode()
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+nrf_nwk_pdu_get(0)
+[NRF_DATA] nrf_get_static_nwk_addr(3C 3C 3C 00 01)
+[DBG] [MAC] nrf_mac_msg.hdr.src_mac_addr: 0x100
+[DBG] [MAC] nrf_mac_msg.hdr.mac_seq: 199
+[DBG] [MAC] nrf_mac_msg.hdr.frame_num: 1
+[DBG] [MAC] nrf_mac_msg.hdr.frame_seq: 0
+-SIG-> RF24_MAC_SEND_FRAME
+-SIG-> RF24_PHY_SEND_FRAME_REQ
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+[NRF_DATA] nrf_get_des_phy_addr(3C 3C 3C 00 00)
+-SIG-> RF24_PHY_IRQ_TX_DS
+-SIG-> RF24_MAC_SEND_FRAME_DONE
+-SIG-> RF24_MAC_SEND_FRAME
+[DBG] [MAC] set_mac_state -> 0
+[DBG] [PHY] nrf_phy_switch_prx_mode()
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+[NRF_DATA] nrf_get_src_phy_addr(3C 3C 3C 00 01)
+-SIG-> RF24_NWK_SEND_MSG_DONE
+nrf_nwk_pdu_free(0)
+-SIG-> FW_PACKED_TIMEOUT
+

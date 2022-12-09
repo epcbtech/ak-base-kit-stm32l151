@@ -1,0 +1,21 @@
+FUNCTION			PERIPHERAL			PIN_F		PIN_P
+
+1.console			UART1				Tx		PA9
+								Rx		PA10
+
+2.rnf24l01			SPI1				SCK		PA5
+								MISO		PA6
+								MOSI		PA7
+								CE		PA3
+								CSN		PA4
+								IRQ		PB0
+
+3.led life			GPIO				LED_LIFE	PB12
+
+4.sht11				GPIO				CLK		PA11
+								DATA		PA12
+
+5.thermistor			ADC				ADC_chanel_1	PA1
+
+6.ir				GPIO				IR_rev		PA15
+								IR_send		PB10

@@ -1,0 +1,11 @@
+How to add USB module
+- include platform/stm32l/Libraries/STM32_USB-FS-Device_Driver/Makefile.mk
+- include platform/stm32l/usb/Makefile.mk
+- declare functions usb_cfg(), usb_fake_plug(), usb_send().
+- declare function sys_irq_usb_recv() where want receive data
+
+How to usage
+- usb_cfg() : USB config HW and SW
+- usb_fake_plug() : (optional) fake plug when device reset (without plug again)
+- usb_send() : send data blocking
+- sys_irq_usb_recv() : receive data in interrupts
