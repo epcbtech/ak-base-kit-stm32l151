@@ -1,8 +1,6 @@
-## **AK - Embedded Software**
+## AK - Embedded Base Kit - STM32L151
 
-## AK - Embedded Base Kit - Lập trình nhúng vi điều khiển - STM32L151
-
-[ 0x08000000 ] : Boot && [ 0x08003000 ] : Application
+[ 0x08000000 ] : Boot  &&  [ 0x08003000 ] : Application
 
 [<img src="hardware/images/design-ak-embedded-base-kit-lap-trinh-nhung-vi-dieu-khien-stm32l151-lcd-top.png" width="240"/>](hardware/Images/design-ak-embedded-base-kit-lap-trinh-nhung-vi-dieu-khien-stm32l151-lcd-top.png)
 
