@@ -3,6 +3,7 @@
 # @date:   05/2/2017
 ##############################################################################
 #NOTE:
+# Learn Makefiles at https://makefiletutorial.com/
 # using find PATH -type d -print to list subdirectories recursively
 
 # Utilitis define
@@ -219,7 +220,9 @@ sym: $(TARGET)
 
 .PHONY: help
 help:
-	$(Print) "[make flash dev=ak-flash] burn firmware via ak bootloader"
+	$(Print) "[make flash dev=/dev/tty*] burn firmware via ak bootloader"
+	$(Print) "             Note: This option is needed install ak_flash. Link download & install: https://github.com/epcbtech/ak-flash"
+	$(Print) "             Example: make flash dev=/dev/ttyUSB0"
 	$(Print) "[make flash] burn firmware via st-link"
 	$(Print) "[make debug gdb=ddd] gdb debug using ddd"
 	$(Print) "[make debug] gdb debug"
@@ -228,16 +231,16 @@ help:
 	$(Print) "[make sym] list symbol from objects file"
 
 .PHONY: flash
-flash: 	all
+flash: all
 	$(Print) BURNING $(TARGET:.axf=.bin) to target
-ifeq ($(dev),ak-flash)
-	ak_flash /dev/thesis_com_port $(TARGET:.axf=.bin) $(APP_START_ADDR_VAL)
+ifdef dev
+	ak_flash $(dev) $(TARGET:.axf=.bin) $(APP_START_ADDR_VAL)
 else
 	$(PROGRAMER_PATH)/STM32_Programmer.sh -c port=SWD -w $(TARGET:.axf=.bin) $(APP_START_ADDR_VAL) -rst
 endif
 
 .PHONY: debug
-debug:	all
+debug: all
 	xterm -e openocd -f $(OPENOCD_PATH)/tcl/board/stm32ldiscovery.cfg &
 ifeq ($(gdb),ddd)
 	$(Print) DBG using DDD

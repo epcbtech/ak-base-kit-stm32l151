@@ -2,6 +2,10 @@
 # @Author: GaoKong
 # @Date:   05/02/2017
 ##############################################################################
+#NOTE:
+# Learn Makefiles at https://makefiletutorial.com/
+# using find PATH -type d -print to list subdirectories recursively
+
 # Utilitis define
 Print = @echo "~"
 

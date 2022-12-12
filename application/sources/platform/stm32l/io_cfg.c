@@ -102,54 +102,6 @@ void led_life_off() {
 }
 
 /******************************************************************************
-* buzzer IO function
-*******************************************************************************/
-void buzzer_io_init() {
-	GPIO_InitTypeDef GPIO_InitStructure;
-	TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;
-	TIM_OCInitTypeDef TIM_OCInitStructure;
-	NVIC_InitTypeDef NVIC_InitStruct;
-
-	RCC_APB1PeriphClockCmd(BUZZER_TIM_PERIPH, ENABLE);
-
-	GPIO_InitStructure.GPIO_Pin = BUZZER_IO_PIN;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
-	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_40MHz;
-	GPIO_Init(BUZZER_IO_PORT, &GPIO_InitStructure);
-	GPIO_PinAFConfig(BUZZER_IO_PORT, BUZZER_IO_SOURCE, BUZZER_IO_AF);
-	GPIO_ResetBits(BUZZER_IO_PORT, BUZZER_IO_PIN);
-
-	TIM_DeInit(BUZZER_TIM);
-	TIM_TimeBaseStructure.TIM_Prescaler = SystemCoreClock / 4000000;
-	TIM_TimeBaseStructure.TIM_Period = 999;
-	TIM_TimeBaseStructure.TIM_ClockDivision = 0;
-	TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
-	TIM_TimeBaseInit(BUZZER_TIM, &TIM_TimeBaseStructure);
-
-	TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1;
-	TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
-	TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_High;
-	TIM_OCInitStructure.TIM_Pulse = 499;
-
-	TIM_OC3Init(BUZZER_TIM, &TIM_OCInitStructure);
-	TIM_OC3PreloadConfig(BUZZER_TIM, TIM_OCPreload_Enable);
-
-	NVIC_InitStruct.NVIC_IRQChannel = BUZZER_TIM_IRQ;
-	NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;
-	NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 0;
-	NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 0;
-	NVIC_Init(&NVIC_InitStruct);
-
-	TIM_ARRPreloadConfig(BUZZER_TIM, ENABLE);
-	TIM_ITConfig(BUZZER_TIM, TIM_IT_Update, ENABLE);
-
-	/* BUZZER TIM enable counter */
-	TIM_Cmd(BUZZER_TIM, ENABLE);
-}
-
-/******************************************************************************
 * nfr24l01 IO function
 *******************************************************************************/
 void nrf24l01_io_ctrl_init() {
