@@ -295,6 +295,8 @@ void scr_idle_handle(ak_msg_t* msg) {
 		APP_DBG_SIG("AC_DISPLAY_BUTON_MODE_RELEASED\n");
 		timer_remove_attr(AC_TASK_DISPLAY_ID, AC_DISPLAY_SHOW_IDLE_BALL_MOVING_UPDATE);
 		SCREEN_TRAN(ui_state_display_off, &scr_off);
+
+		BUZZER_PlayTones(tones_3beep);
 	}
 		break;
 
