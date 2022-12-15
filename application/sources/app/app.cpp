@@ -251,8 +251,8 @@ int main_app() {
 #endif
 
 #if defined (TASK_ZIGBEE_EN)
-	Serial2.begin();
-	Serial2.setTimeout(100);
+	Serial3.begin();
+	Serial3.setTimeout(100);
 #endif
 
 	EXIT_CRITICAL();

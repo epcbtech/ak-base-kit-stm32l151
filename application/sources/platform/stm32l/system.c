@@ -1,6 +1,6 @@
 /**
  ******************************************************************************
- * @author: GaoKong
+ * @author: GaoMASS
  * @date:   05/09/2016
  ******************************************************************************
 **/
@@ -78,6 +78,7 @@ void timer7_irq();
 void usb_lp_irq();
 void uart1_irq();
 void uart2_irq();
+void uart3_irq();
 #if defined (TASK_MBMASTER_EN)
 void vMBPTimerISR( void );
 void vMBPUSART2ISR( void );
@@ -160,13 +161,12 @@ void (* const isr_vector[])() = {
 		default_handler,						//	TIM10
 		default_handler,						//	TIM11
 		default_handler,						//	TIM2
-		
+
 		#if defined (TASK_BUZZER_EN)
 		buzzer_irq,								//	TIM3
 		#else
 		default_handler,						//	TIM3
 		#endif
-		
 		#if defined (TASK_MBMASTER_EN)
 		vMBPTimerISR,							//	TIM4
 		#else
@@ -180,18 +180,17 @@ void (* const isr_vector[])() = {
 		default_handler,						//	SPI1
 		default_handler,						//	SPI2
 		uart1_irq,								//	USART1
-
-		#if defined (TASK_MBMASTER_EN) && defined (TASK_ZIGBEE_EN)
-		default_handler							//	USART2
-		#elif defined (TASK_MBMASTER_EN)
+		#if defined (TASK_MBMASTER_EN)
 		vMBPUSART2ISR,							//	USART2
-		#elif defined (TASK_ZIGBEE_EN)
-		uart2_irq,								//	USART2
 		#else
 		default_handler,						//	USART2
 		#endif
 
-		default_handler,						//	USART3
+		#if defined (TASK_ZIGBEE_EN)
+		uart3_irq,								//	USART3
+		#else
+		default_handler,
+		#endif
 		default_handler,						//	EXTI Line 15..10
 		default_handler,						//	RTC Alarm through EXTI Line
 		sys_irq_usb_recv,						//	USB FS Wakeup from suspend
@@ -495,6 +494,12 @@ void uart1_irq() {
 void uart2_irq() {
 	task_entry_interrupt();
 	sys_irq_uart2();
+	task_exit_interrupt();
+}
+
+void uart3_irq() {
+	task_entry_interrupt();
+	sys_irq_uart3();
 	task_exit_interrupt();
 }
 
