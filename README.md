@@ -8,8 +8,8 @@ AK Embedded Base Kit is an evaluation kit for advanced embedded software learner
 
 ### Memory map
 ```sh
-[ 0x08000000 ] : Boot [ak-base-kit-stm32l151-boot.bin]
-[ 0x08003000 ] : Application [ak-base-kit-stm32l151-application.bin]
+[ 0x08000000 ] : Boot [ak-base-kit-stm32l151-boot.bin](hardware/bin/ak-base-kit-stm32l151-boot.bin)
+[ 0x08003000 ] : Application [ak-base-kit-stm32l151-application.bin](hardware/bin/ak-base-kit-stm32l151-application.bin)
 ```
 Note: After loading boot & application firmware, you can use [AK - Flash](https://github.com/epcbtech/ak-flash) to load the application directly through the USB port on the KIT
 ```sh
