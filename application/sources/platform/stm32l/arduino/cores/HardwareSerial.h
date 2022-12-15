@@ -101,5 +101,6 @@ public:
 };
 
 extern HardwareSerial Serial2;
+extern HardwareSerial Serial3;
 
 #endif

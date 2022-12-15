@@ -229,6 +229,23 @@ extern "C"
 #define RS485_DIR_IO_PORT				(GPIOA)
 #define RS485_DIR_IO_CLOCK				(RCC_AHBPeriph_GPIOA)
 
+/****************************************************************************
+ *Pin map UART3
+*****************************************************************************/
+#define USART3_TX_PIN					GPIO_Pin_10
+#define USART3_TX_GPIO_PORT				GPIOB
+#define USART3_TX_GPIO_CLK				RCC_AHBPeriph_GPIOB
+#define USART3_TX_SOURCE				GPIO_PinSource10
+#define USART3_TX_AF					GPIO_AF_USART3
+
+#define USART3_RX_PIN					GPIO_Pin_11
+#define USART3_RX_GPIO_PORT				GPIOB
+#define USART3_RX_GPIO_CLK				RCC_AHBPeriph_GPIOB
+#define USART3_RX_SOURCE				GPIO_PinSource11
+#define USART3_RX_AF					GPIO_AF_USART3
+
+#define USART3_CLK						RCC_APB1Periph_USART3
+
 /******************************************************************************
 * button function
 *******************************************************************************/
@@ -402,6 +419,13 @@ extern void usb_send(uint8_t* buf, uint8_t len);
 void io_uart2_cfg();
 void io_uart2_putc(uint8_t);
 extern uint8_t io_uart2_getc();
+
+/******************************************************************************
+* uart3 function
+*******************************************************************************/
+void io_uart3_cfg();
+void io_uart3_putc(uint8_t);
+extern uint8_t io_uart3_getc();
 
 /*****************************************************************************
  *io uart for rs485-modbusRTU

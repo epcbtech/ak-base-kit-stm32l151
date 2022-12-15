@@ -1399,3 +1399,75 @@ void io_rs485_dir_low() {
 void io_rs485_dir_high() {
 	GPIO_SetBits(RS485_DIR_IO_PORT, RS485_DIR_IO_PIN);
 }
+
+void io_uart3_cfg() {
+	USART_InitTypeDef USART_InitStructure;
+	GPIO_InitTypeDef GPIO_InitStructure;
+	NVIC_InitTypeDef NVIC_InitStructure;
+
+	/* Enable GPIO clock */
+	RCC_AHBPeriphClockCmd(USART3_TX_GPIO_CLK | USART3_RX_GPIO_CLK, ENABLE);
+
+	/* Enable USART clock */
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART3, ENABLE);
+
+	/* Connect PXx to USART2_Tx */
+	GPIO_PinAFConfig(USART3_TX_GPIO_PORT, USART3_TX_SOURCE, USART3_TX_AF);
+
+	/* Connect PXx to USART2_Rx */
+	GPIO_PinAFConfig(USART3_RX_GPIO_PORT, USART3_RX_SOURCE, USART3_RX_AF);
+
+	/* Configure USART Tx and Rx as alternate function push-pull */
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_2MHz;
+	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
+	GPIO_InitStructure.GPIO_Pin = USART3_TX_PIN;
+	GPIO_Init(USART3_TX_GPIO_PORT, &GPIO_InitStructure);
+
+	GPIO_InitStructure.GPIO_Pin = USART3_RX_PIN;
+	GPIO_Init(USART3_RX_GPIO_PORT, &GPIO_InitStructure);
+
+	/* USART3 configuration */
+	USART_InitStructure.USART_BaudRate = 115200;
+	USART_InitStructure.USART_WordLength = USART_WordLength_8b;
+	USART_InitStructure.USART_StopBits = USART_StopBits_1;
+	USART_InitStructure.USART_Parity = USART_Parity_No;
+	USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
+	USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
+	USART_Init(USART3, &USART_InitStructure);
+
+	/* Enable the USART3 Interrupt */
+	NVIC_InitStructure.NVIC_IRQChannel = USART3_IRQn;
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = IRQ_PRIO_UART3_IO;
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+	NVIC_Init(&NVIC_InitStructure);
+
+	USART_ClearITPendingBit(USART3, USART_IT_RXNE | USART_IT_TXE);
+	USART_ITConfig(USART3, USART_IT_RXNE, ENABLE);
+	USART_ITConfig(USART3, USART_IT_TXE, DISABLE);
+
+	/* Enable USART */
+	USART_Cmd(USART3, ENABLE);
+}
+
+void io_uart3_putc(uint8_t c) {
+	/* wait last transmission completed */
+	while (USART_GetFlagStatus(USART3, USART_FLAG_TXE) == RESET);
+
+	/* put transnission data */
+	USART_SendData(USART3, (uint8_t)c);
+
+	/* wait transmission completed */
+	while (USART_GetFlagStatus(USART3, USART_FLAG_TC) == RESET);
+}
+
+uint8_t io_uart3_getc() {
+	uint8_t c = 0;
+	while (USART_GetITStatus(USART3, USART_IT_RXNE) == SET) {
+		USART_ClearITPendingBit(USART3, USART_IT_RXNE);
+		c = (uint8_t)USART_ReceiveData(USART3);
+	}
+	return c;
+}

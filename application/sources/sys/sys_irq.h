@@ -13,6 +13,7 @@ extern "C"
 extern void sys_irq_nrf24l01();
 extern void sys_irq_shell();
 extern void sys_irq_uart2();
+extern void sys_irq_uart3();
 extern void sys_irq_ir_io_rev();
 extern void sys_irq_timer_1us();
 extern void sys_irq_timer_50us();

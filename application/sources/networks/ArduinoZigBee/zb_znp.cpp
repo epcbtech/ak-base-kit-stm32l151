@@ -4,8 +4,10 @@
 #include "zb_znp.h"
 #include <Arduino.h>
 
-#if defined(TASK_ZIGBEE_EN)
-#include "xprintf.h"
+#if defined(ZB_ZNP_EN)
+	#define ZB_ZNP(fmt, ...)		xprintf("[ZB_ZNP] " fmt, ##__VA_ARGS__)
+#else
+	#define ZB_ZNP(fmt, ...)
 #endif
 
 uint8_t zb_znp::get_sequence_send() {
@@ -171,7 +173,7 @@ uint8_t zb_znp::waiting_for_message(uint16_t cmd) {
 			}
 		}
 		_retry_time--;
-		//xprintf("waiting_for_message _retry_time: 0x%04X %d\n", cmd,  _retry_time);
+		//APP_DBG("waiting_for_message _retry_time: 0x%04X %d\n", cmd,  _retry_time);
 	}
 	znp_frame.zigbee_msg_denied_handle = 0;
 	return ZNP_RET_NG;
@@ -192,7 +194,7 @@ uint8_t zb_znp::waiting_for_status(uint16_t cmd, uint8_t status) {
 			}
 		}
 		_retry_time--;
-		//xprintf("waiting_for_status _retry_time: 0x%04X %d\n", cmd,  _retry_time);
+		//APP_DBG("waiting_for_status _retry_time: 0x%04X %d\n", cmd,  _retry_time);
 	}
 	znp_frame.zigbee_msg_denied_handle = 0;
 	return ZNP_RET_NG;
@@ -215,7 +217,7 @@ uint8_t zb_znp::get_msg_return(uint16_t cmd, uint8_t status, uint8_t* _rx_buffer
 			}
 		}
 		_retry_time--;
-		//xprintf("get_msg_return _retry_time: 0x%04X %d\n", cmd,  _retry_time);
+		//APP_DBG("get_msg_return _retry_time: 0x%04X %d\n", cmd,  _retry_time);
 	}
 	znp_frame.zigbee_msg_denied_handle = 0;
 	return ZNP_RET_NG;
@@ -281,25 +283,25 @@ void zb_znp::hard_reset() {
 }
 
 uint8_t zb_znp::set_startup_options(uint8_t opt) {
-	int8_t i = 0;
-	if (opt > (STARTOPT_CLEAR_CONFIG + STARTOPT_CLEAR_STATE)) {
-		return ZNP_RET_NG;
-	}
-
+	(void)opt;
+	uint8_t i = 0;
 	m_znp_buf[i] = ZNP_SOF;
 	i++;
 	m_znp_buf[i] = 0;
 	i++;
-	m_znp_buf[i] = MSB(ZB_WRITE_CONFIGURATION);
+	m_znp_buf[i] = HI_UINT16(SYS_OSAL_NV_WRITE);
 	i++;
-	m_znp_buf[i] = LSB(ZB_WRITE_CONFIGURATION);
+	m_znp_buf[i] = LO_UINT16(SYS_OSAL_NV_WRITE);
 	i++;
-
-	m_znp_buf[i] = ZCD_NV_STARTUP_OPTION;
+	m_znp_buf[i] = 3;
 	i++;
-	m_znp_buf[i] = ZCD_NV_STARTUP_OPTION_LEN;
+	m_znp_buf[i] = 0;
 	i++;
-	m_znp_buf[i] = opt;
+	m_znp_buf[i] = 0;
+	i++;
+	m_znp_buf[i] = 1;
+	i++;
+	m_znp_buf[i] = 3;
 	i++;
 	m_znp_buf[1] = i - 4;
 	m_znp_buf[i] = calc_fcs((uint8_t *) &m_znp_buf[1], (i - 1));
@@ -309,26 +311,22 @@ uint8_t zb_znp::set_startup_options(uint8_t opt) {
 		return ZNP_RET_NG;
 	}
 
-	return waiting_for_message(ZB_WRITE_CONFIGURATION | 0x6000);
+	return waiting_for_message(0x6109);
 }
 
 uint8_t zb_znp::set_panid(uint16_t pan_id) {
-	int8_t i = 0;
+	uint8_t i = 0;
 	m_znp_buf[i] = ZNP_SOF;
 	i++;
 	m_znp_buf[i] = 0;
 	i++;
-	m_znp_buf[i] = MSB(ZB_WRITE_CONFIGURATION);
+	m_znp_buf[i] = HI_UINT16(UTIL_SET_PANID);
 	i++;
-	m_znp_buf[i] = LSB(ZB_WRITE_CONFIGURATION);
+	m_znp_buf[i] = LO_UINT16(UTIL_SET_PANID);
 	i++;
-	m_znp_buf[i] = ZCD_NV_PANID;
+	m_znp_buf[i] = LO_UINT16(pan_id);
 	i++;
-	m_znp_buf[i] = ZCD_NV_PANID_LEN;
-	i++;
-	m_znp_buf[i] = LSB(pan_id);
-	i++;
-	m_znp_buf[i] = MSB(pan_id);
+	m_znp_buf[i] = HI_UINT16(pan_id);
 	i++;
 	m_znp_buf[1] = i - 4;
 	m_znp_buf[i] = calc_fcs((uint8_t *) &m_znp_buf[1], (i - 1));
@@ -336,37 +334,38 @@ uint8_t zb_znp::set_panid(uint16_t pan_id) {
 	if (write(m_znp_buf, i) < 0) {
 		return ZNP_RET_NG;
 	}
-	return waiting_for_message(ZB_WRITE_CONFIGURATION | 0x6000);
+	return ZNP_RET_OK;
 }
 
 uint8_t zb_znp::set_zigbee_device_type(uint8_t dev_type) {
 	uint8_t i = 0;
-	if (dev_type > END_DEVICE) {
-		return ZNP_RET_NG;
-	}
 	m_znp_buf[i] = ZNP_SOF;
 	i++;
 	m_znp_buf[i] = 0;
 	i++;
-	m_znp_buf[i] = MSB(ZB_WRITE_CONFIGURATION);
+	m_znp_buf[i] = HI_UINT16(SYS_OSAL_NV_WRITE);
 	i++;
-	m_znp_buf[i] = LSB(ZB_WRITE_CONFIGURATION);
+	m_znp_buf[i] = LO_UINT16(SYS_OSAL_NV_WRITE);
 	i++;
-
-	m_znp_buf[i] = ZCD_NV_LOGICAL_TYPE;
+	m_znp_buf[i] = 0x87;
 	i++;
-	m_znp_buf[i] = ZCD_NV_LOGICAL_TYPE_LEN;
+	m_znp_buf[i] = 0;
 	i++;
-	m_znp_buf[i] = dev_type;
+	m_znp_buf[i] = 0;
+	i++;
+	m_znp_buf[i] = 1;
+	i++;
+	m_znp_buf[i] = 0;
 	i++;
 	m_znp_buf[1] = i - 4;
 	m_znp_buf[i] = calc_fcs((uint8_t *) &m_znp_buf[1], (i - 1));
 	i++;
+
 	if (write(m_znp_buf, i) < 0) {
 		return ZNP_RET_NG;
 	}
 
-	return waiting_for_message(ZB_WRITE_CONFIGURATION | 0x6000);
+	return waiting_for_message(0x6109);
 }
 
 uint8_t zb_znp::set_transmit_power(uint8_t tx_power_db) {
@@ -581,139 +580,123 @@ uint8_t zb_znp::set_callbacks(uint8_t cb) {
 uint8_t  zb_znp::start_coordinator(uint8_t opt) {
 	uint8_t znpResult;
 
-	//Serial.print("start_coordinator\n");
-
 	hard_reset();
 
 	znpResult = soft_reset();
 	if (znpResult == ZNP_RET_NG) {
-		//Serial.print("ERROR: reset ZNP \n");
+		ZB_ZNP("ERROR: reset ZNP \n");
 		return znpResult;
 	}
-	//Serial.print("soft_reset\n");
+	ZB_ZNP("OK: reset ZNP\n");
 
 	if (opt == 0) {
-		//Serial.print("Skipping startup option !\n");
+		ZB_ZNP("Skipping startup option !\n");
 		for (int i = 1; i < 0x20; i++) {
 			if (i == 0x01 || i == 0x0A) {
 				znpResult = af_register_generic_application(i);
 				if (znpResult != ZNP_RET_OK) {
-					//Serial.print("ERROR: af register ");
-					//Serial.print(i);
-					//Serial.print("\n");
+					ZB_ZNP("ERROR: af register ");
+					ZB_ZNP("%d\n",i);
 					return znpResult;
 				}
 			}
 		}
-		znpResult = bdb_start_commissioning(COMMISSIONING_MODE_STEERING, 1, 0);		// 0x02 is Network Steering
+
+		ZB_ZNP("af_register_generic_application\n");
+
+		// Start commissioning using network formation as parameter to start coordinator
+		znpResult = bdb_start_commissioning(COMMISSIONING_MODE_INFORMATION, 1, 1);		// 0x04 is Network Formation
 		if (znpResult != ZNP_RET_OK) {
-			//Serial.print("ERROR: Network Steering \n");
+			ZB_ZNP("ERROR: bdb start commissioning\n");
+			return znpResult;
+		}
+		ZB_ZNP("OK: bdb start commissioning\n");
+
+		znpResult = bdb_start_commissioning(COMMISSIONING_MODE_STEERING, 1, 1);		// 0x02 is Network Steering
+		if (znpResult != ZNP_RET_OK) {
+			ZB_ZNP("ERROR: Network Steering \n");
 			return znpResult;
 		}
 
 	} else {
 		znpResult = set_startup_options(DEFAULT_STARTUP_OPTIONS);
 		if (znpResult != ZNP_RET_OK) {
-			//Serial.print("ERROR: startup option. \n");
+			ZB_ZNP("ERROR: startup option. \n");
 			return znpResult;
 		}
-		//Serial.println("set_startup_options");
+		ZB_ZNP("set_startup_options\n");
 
 		znpResult = soft_reset();
 		if (znpResult == ZNP_RET_NG) {
-			//Serial.print("ERROR: reset ZNP \n");
+			ZB_ZNP("ERROR: Soft Reset ZNP\n");
 			return znpResult;
 		}
-		//Serial.println("soft_reset");
+		ZB_ZNP("OK: Soft Reset ZNP\n");
 
 		znpResult = set_panid((uint16_t) PAN_ID);
 		if (znpResult != ZNP_RET_OK) {
-			//Serial.print("ERROR: PAN ID \n");
+			ZB_ZNP("ERROR: PAN ID \n");
 			return znpResult;
 		}
-		//Serial.println("set_panid");
+		ZB_ZNP("set_panid");
 
 		znpResult = set_zigbee_device_type(COORDINATOR);
 		if (znpResult != ZNP_RET_OK) {
-			//Serial.print("ERROR: Device type \n");
+			ZB_ZNP("ERROR: Device type \n");
 			return znpResult;
 		}
-		//Serial.println("set_zigbee_device_type");
+		ZB_ZNP("OK: Device type\n");
 
 		//Set primary channel mask & disable secondary channel mask
 		znpResult = set_channel_mask(CHANNEL_TRUE, (uint32_t) DEFAULT_CHANNEL_MASK);
 		if (znpResult != ZNP_RET_OK) {
-			//Serial.print("ERROR: set channel mask \n");
+			ZB_ZNP("ERROR: set channel mask \n");
 			return znpResult;
 		}
-		//Serial.println("set_channel_mask");
+		ZB_ZNP("OK: set channel mask\n");
 
 		znpResult = set_channel_mask(CHANNEL_FALSE, (uint32_t) 0);
 		if (znpResult != ZNP_RET_OK) {
-			//Serial.print("ERROR: set channel mask \n");
+			ZB_ZNP("ERROR: set channel mask \n");
 			return znpResult;
 		}
-		//Serial.println("set_channel_mask");
+		ZB_ZNP("OK: set_channel_mask\n");
 
 		znpResult = app_cnf_set_allowrejoin_tc_policy(1);
 		if (znpResult != ZNP_RET_OK) {
-			//Serial.print("ERROR: set allow join \n");
+			ZB_ZNP("ERROR: set allow join \n");
 			return znpResult;
 		}
-		//Serial.println("app_cnf_set_allowrejoin_tc_policy");
-
-		znpResult = set_transmit_power(DEFAULT_TX_POWER);
-		if (znpResult != ZNP_RET_OK) {
-			//Serial.print("ERROR: set transmit power \n");
-			return znpResult;
-		}
-		//Serial.println("set_transmit_power");
-		// Set ZCD_NV_ZDO_DIRECT_CB
-		znpResult = set_callbacks(CALLBACKS_ENABLED);
-		if (znpResult != ZNP_RET_OK) {
-			//Serial.print("ERROR: set callback \n");
-			return znpResult;
-		}
-		//Serial.println("set_callbacks");
+		ZB_ZNP("OK: set allow join");
 
 		for (int i = 1; i < 0x20; i++) {
 			if (i == 0x01 || i == 0x0A) {
 				znpResult = af_register_generic_application(i);
 				if (znpResult != ZNP_RET_OK) {
-					//Serial.print("ERROR: af register ");
-					//Serial.print(i);
-					//Serial.print("\n");
+					ZB_ZNP("ERROR: af register ");
 					return znpResult;
 				}
 			}
 		}
-		//Serial.println("af_register_generic_application");
+		ZB_ZNP("OK: af_register_generic_application");
+
 		// Start commissioning using network formation as parameter to start coordinator
-		znpResult = bdb_start_commissioning(COMMISSIONING_MODE_INFORMATION, 2, 0);		// 0x04 is Network Formation
+		znpResult = bdb_start_commissioning(COMMISSIONING_MODE_INFORMATION, 1, 1);		// 0x04 is Network Formation
 		if (znpResult != ZNP_RET_OK) {
-			//Serial.print("ERROR: Network Steering \n");
+			ZB_ZNP("ERROR: Network Information \n");
 			return znpResult;
 		}
-		//Serial.println("bdb_start_commissioning");
-	}
+		ZB_ZNP("OK: Network Information\n");
 
-	znpResult = set_tc_require_key_exchange(0);
-	if (znpResult != ZNP_RET_OK) {
-		//Serial.print("ERROR: set TC key exchange \n");
-		return znpResult;
-	}
-	//Serial.println("set_tc_require_key_exchange");
+		znpResult = bdb_start_commissioning(COMMISSIONING_MODE_STEERING, 1, 1);		// 0x02 is Network Steering
+		if (znpResult != ZNP_RET_OK) {
+			ZB_ZNP("ERROR: Network Steering \n");
+			return znpResult;
+		}
 
-	znpResult = set_permit_joining_req(SHORT_ADDRESS_COORDINATOR, DISABLE_PERMIT_JOIN, 0);
-	if (znpResult != ZNP_RET_OK) {
-		//Serial.print("ERROR: disabled permit join \n");
-		return znpResult;
-	}
-	//Serial.println("set_permit_joining_req");
+		ZB_ZNP("OK: Network Steering\n");
 
-	/*get MAC address of coordinator*/
-	get_mac_addr_req(SHORT_ADDRESS_COORDINATOR, 0x00, 0x00);
-	//Serial.println("get_mac_addr_req");
+	}
 
 	return ZNP_RET_OK;
 }
@@ -744,7 +727,7 @@ uint8_t zb_znp::start_router(uint8_t opt) {
 		//Serial.print("zb_read_configuration ERR !!!\n");
 	}
 
-	if (opt == 0 || (opt == 2 && zb_read_configuration_buf[3] == 0xF1)) {
+	if (opt == 0 ) {
 		//Serial.print("Skipping startup option !\n");
 
 		znpCmdExeResult = soft_reset();

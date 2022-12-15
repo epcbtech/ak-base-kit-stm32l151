@@ -32,7 +32,7 @@
 #define ZB_DBG(fmt, ...)
 #endif
 
-zb_znp zigbee_network(&Serial2);
+zb_znp zigbee_network(&Serial3);
 
 uint16_t control_switch_address;
 
@@ -62,6 +62,11 @@ int zb_znp::zigbee_message_handler(zigbee_msg_t& zigbee_msg) {
 		break;
 
 	case AF_INCOMING_MSG: {
+
+		#if defined (TASK_BUZZER_EN)
+			BUZZER_PlayTones(tones_startup);
+		#endif
+
 		ZB_DBG("ZB_RECEIVE_DATA_INDICATION\n");
 		afIncomingMSGPacket_t* st_af_incoming_msg = (afIncomingMSGPacket_t*)zigbee_msg.data;
 
