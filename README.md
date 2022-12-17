@@ -1,6 +1,6 @@
 ## AK Embedded Base Kit - STM32L151 - Lập trình nhúng vi điều khiển
 
-[<img src="hardware/images/ak-embedded-software-logo.jpg" width="240"/>](hardware/images/ak-embedded-software-logo.jpg)
+[<img src="hardware/images/ak-embedded-software-logo.jpg" width="240"/>](https://github.com/epcbtech)
 
 AK Embedded Base Kit is an evaluation kit for advanced embedded software learners.
 - The KIT integrates 1.3" Oled LCD, 3 push buttons, and 1 Buzzers that play music, to learn the event-driven system through hands-on game machine design.
@@ -19,9 +19,9 @@ ak_flash /dev/ttyUSB0 ak-base-kit-stm32l151-application.bin 0x08003000
 ```
 
 ### Hardware
-[<img src="hardware/images/ak-embedded-base-kit-lap-trinh-nhung-vi-dieu-khien-stm32l151-non-lcd.jpg" width="480"/>](hardware/images/ak-embedded-base-kit-lap-trinh-nhung-vi-dieu-khien-stm32l151-non-lcd.jpg)
+[<img src="hardware/images/ak-embedded-base-kit-lap-trinh-nhung-vi-dieu-khien-stm32l151-non-lcd.jpg" width="480"/>](https://epcb.vn/products/ak-embedded-base-kit-lap-trinh-nhung-vi-dieu-khien-mcu)
 
-[<img src="hardware/images/ak-embedded-base-kit-lap-trinh-nhung-vi-dieu-khien-stm32l151-non-lcd-bottom.jpg" width="480"/>](hardware/images/ak-embedded-base-kit-lap-trinh-nhung-vi-dieu-khien-stm32l151-non-lcd-bottom.jpg)
+[<img src="hardware/images/ak-embedded-base-kit-lap-trinh-nhung-vi-dieu-khien-stm32l151-non-lcd-bottom.jpg" width="480"/>](https://epcb.vn/products/ak-embedded-base-kit-lap-trinh-nhung-vi-dieu-khien-mcu)
 
 ### Reference
 | Topic | Link |
