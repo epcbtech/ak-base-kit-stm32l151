@@ -14,8 +14,8 @@ NAME_MODULE = ak-base-kit-stm32l151-application
 PROJECT = $(NAME_MODULE)
 
 GCC_PATH		= $(HOME)/workspace/tools/gcc-arm-none-eabi-10.3-2021.10
-OPENOCD_CFG_PATH	= /usr/local/share/openocd/scripts/board/stm32ldiscovery.cfg
 PROGRAMER_PATH		= $(HOME)/workspace/tools/STM32CubeProgrammer/bin
+OPENOCD_CFG_PATH	= /usr/local/share/openocd/scripts/board/stm32ldiscovery.cfg
 
 # App start address, that need sync with declare in linker file and interrupt vector table.
 APP_START_ADDR_VAL = 0x08003000
@@ -53,13 +53,11 @@ USB_OPTION = -UUSING_USB_MOD
 
 # Interface compile option.
 IF_LINK_OPTION = -UIF_LINK_UART_EN
-IF_NETWORK_NRF24_OPTION = -DIF_NETWORK_NRF24_EN
+IF_NETWORK_NRF24_OPTION = -UIF_NETWORK_NRF24_EN
 
 # Task compile option.
 TASK_ZIGBEE_OPTION = -UTASK_ZIGBEE_EN
-TASK_MBMASTER_OPTION = -DTASK_MBMASTER_EN
-TASK_BUZZER_OPTION = -DTASK_BUZZER_EN
-TASK_NRF24_DEMO_OPTION = -DTASK_NRF24_DEMO_EN
+TASK_MBMASTER_OPTION = -UTASK_MBMASTER_EN
 
 # Include sources file
 include sources/ak/Makefile.mk

@@ -897,7 +897,6 @@ int32_t shell_psv(uint8_t* argv) {
 }
 
 int32_t shell_buzzer(uint8_t* argv) {
-#if defined (TASK_BUZZER_EN)
 	switch (*(argv + 5)) {
 	case 'i': {
 		BUZZER_Init();
@@ -927,7 +926,6 @@ int32_t shell_buzzer(uint8_t* argv) {
 		LOGIN_PRINT("4. \"beep 3\"                           : buzzer play tones super mario bros \n");
 		break;
 	}
-#endif
 
 	return 0;
 }

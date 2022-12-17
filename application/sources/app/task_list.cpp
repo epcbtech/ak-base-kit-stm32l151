@@ -19,6 +19,7 @@ const task_t app_task_table[] = {
 	{AC_TASK_UART_IF_ID			,	TASK_PRI_LEVEL_4	,	task_uart_if		},
 	{AC_TASK_DBG_ID				,	TASK_PRI_LEVEL_4	,	task_dbg			},
 	{AC_TASK_DISPLAY_ID			,	TASK_PRI_LEVEL_4	,	task_display		},
+
 	#if defined(TASK_ZIGBEE_EN)
 	{AC_TASK_ZIGBEE_ID			,	TASK_PRI_LEVEL_4	,	task_zigbee			},
 	#endif
@@ -30,10 +31,6 @@ const task_t app_task_table[] = {
 	{AC_RF24_PHY_ID				,	TASK_PRI_LEVEL_3	,	task_rf24_phy		},
 	{AC_RF24_MAC_ID				,	TASK_PRI_LEVEL_4	,	task_rf24_mac		},
 	{AC_RF24_NWK_ID				,	TASK_PRI_LEVEL_5	,	task_rf24_nwk		},
-	#endif
-
-	#if defined (TASK_NRF24_DEMO_EN)
-	{AC_RF24_DEMO_ID			,	TASK_PRI_LEVEL_3	,	task_rf24_demo		},
 	#endif
 
 	/*************************************************************************/

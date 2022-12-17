@@ -78,13 +78,11 @@ void timer7_irq();
 void usb_lp_irq();
 void uart1_irq();
 void uart2_irq();
+void buzzer_irq( void );
+
 #if defined (TASK_MBMASTER_EN)
 void vMBPTimerISR( void );
 void vMBPUSART2ISR( void );
-#endif
-
-#if defined(TASK_BUZZER_EN)
-void buzzer_irq( void );
 #endif
 
 /* cortex-M processor fault exceptions */
@@ -161,11 +159,7 @@ void (* const isr_vector[])() = {
 		default_handler,						//	TIM11
 		default_handler,						//	TIM2
 		
-		#if defined (TASK_BUZZER_EN)
 		buzzer_irq,								//	TIM3
-		#else
-		default_handler,						//	TIM3
-		#endif
 		
 		#if defined (TASK_MBMASTER_EN)
 		vMBPTimerISR,							//	TIM4

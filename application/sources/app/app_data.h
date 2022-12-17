@@ -3,20 +3,15 @@
 #include <stdint.h>
 
 #include "sys_boot.h"
-
+#include "sys_dbg.h"
 #include "app.h"
+#include "buzzer.h"
 
 #if defined (TASK_MBMASTER_EN)
 #include "mbport.h"
 #include "mbm.h"
 #include "common/mbportlayer.h"
 #endif
-
-#if defined (TASK_BUZZER_EN)
-#include "buzzer.h"
-#endif
-
-#include "sys_dbg.h"
 
 /******************************************************************************
 * IF Type

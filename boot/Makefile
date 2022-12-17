@@ -14,8 +14,8 @@ NAME_MODULE = ak-base-kit-stm32l151-boot
 PROJECT = $(NAME_MODULE)
 
 GCC_PATH		= $(HOME)/workspace/tools/gcc-arm-none-eabi-10.3-2021.10
-OPENOCD_CFG_PATH	= /usr/local/share/openocd/scripts/board/stm32ldiscovery.cfg
 PROGRAMER_PATH		= $(HOME)/workspace/tools/STM32CubeProgrammer/bin
+OPENOCD_CFG_PATH	= /usr/local/share/openocd/scripts/board/stm32ldiscovery.cfg
 
 #Include sources file
 include sources/app/Makefile.mk

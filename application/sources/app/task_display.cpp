@@ -397,10 +397,6 @@ void view_scr_info() {
 			view_render.drawPixel(x+40, y+2, qrcode_getModule(&qrcode, x, y) ? 1 : 0);
 		}
 	}
-
-	view_render.setTextSize(1);
-	view_render.setCursor(6, 56);
-	view_render.print("AK Embedded Base Kit");
 }
 
 #define AC_DISPLAY_TIMEOUT_PROTECT_SCR_INFO_INTERVAL	60000	/* 60s */
