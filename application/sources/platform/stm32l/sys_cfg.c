@@ -238,8 +238,6 @@ void sys_ctrl_shell_put_char_block(uint8_t c) {
 }
 
 void sys_ctrl_shell_sw_to_block() {
-	while (! ring_buffer_char_is_empty(&ring_buffer_char_shell_send));
-
 	ENTRY_CRITICAL();
 
 	xfunc_output = (void(*)(int))sys_ctrl_shell_put_char_block;

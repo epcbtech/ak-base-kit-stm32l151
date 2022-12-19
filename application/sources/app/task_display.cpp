@@ -223,7 +223,9 @@ void scr_startup_handle(ak_msg_t* msg) {
 	case AC_DISPLAY_INITIAL: {
 		APP_DBG_SIG("AC_DISPLAY_INITIAL\n");
 		view_render.initialize();
+
 		view_render_display_on();
+
 		timer_set(AC_TASK_DISPLAY_ID, AC_DISPLAY_SHOW_LOGO, AC_DISPLAY_STARTUP_INTERVAL, TIMER_ONE_SHOT);
 	}
 		break;

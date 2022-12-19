@@ -5,17 +5,9 @@
 #include "app.h"
 
 /******************************************************************************
-* Data type of RF24Network
-*******************************************************************************/
-#define RF24_DATA_COMMON_MSG_TYPE			(1)
-#define RF24_DATA_PURE_MSG_TYPE				(2)
-#define RF24_DATA_REMOTE_CMD_TYPE			(3)
-
-/******************************************************************************
 * Commom data structure for transceiver data
 *******************************************************************************/
 #define FIRMWARE_PSK		0x1A2B3C4D
-#define FIRMWARE_LOK		0x1234ABCD
 
 typedef struct {
 	uint8_t is_power_on_reset;

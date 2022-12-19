@@ -1,7 +1,6 @@
 include sources/platform/stm32l/Libraries/STM32L1xx_StdPeriph_Driver/Makefile.mk
 include sources/platform/stm32l/Libraries/CMSIS/Makefile.mk
 include sources/platform/stm32l/arduino/Makefile.mk
-include sources/platform/stm32l/usb/Makefile.mk
 
 LDFILE = sources/platform/stm32l/ak.ld
 

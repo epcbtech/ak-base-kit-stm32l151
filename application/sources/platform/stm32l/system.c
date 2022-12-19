@@ -16,10 +16,6 @@
 #include "stm32l1xx_conf.h"
 #include "core_cm3.h"
 
-#if defined(USING_USB_MOD)
-#include "usb_istr.h"
-#endif
-
 #include "sys_dbg.h"
 #include "sys_ctrl.h"
 #include "sys_irq.h"
@@ -32,7 +28,6 @@
 #include "app.h"
 
 #include "sys_cfg.h"
-#include "sys_thread.h"
 
 #if defined (TASK_MBMASTER_EN)
 #include "mbport.h"
@@ -75,7 +70,6 @@ void exti_line15_irq();
 void timer6_irq();
 void timer4_irq();
 void timer7_irq();
-void usb_lp_irq();
 void uart1_irq();
 void uart2_irq();
 void buzzer_irq( void );
@@ -94,8 +88,8 @@ void usage_fault_handler()  __attribute__ ((weak));
 
 /* cortex-M processor non-fault exceptions */
 void dg_monitor_handler()   __attribute__ ((weak, alias("default_handler")));
-void pendsv_handler();
-void svc_handler();
+void pendsv_handler()		__attribute__ ((weak, alias("default_handler")));
+void svc_handler()			__attribute__ ((weak, alias("default_handler")));
 void systick_handler();
 
 /* external interrupts */
@@ -149,7 +143,7 @@ void (* const isr_vector[])() = {
 		default_handler,						//	DMA1 Channel 7
 		default_handler,						//	ADC1
 		default_handler,						//	USB High Priority
-		usb_lp_irq,								//	USB Low  Priority
+		default_handler,						//	USB Low  Priority
 		default_handler,						//	DAC
 		default_handler,						//	COMP through EXTI Line
 		default_handler,						//	EXTI Line 9..5
@@ -188,7 +182,7 @@ void (* const isr_vector[])() = {
 		default_handler,						//	USART3
 		default_handler,						//	EXTI Line 15..10
 		default_handler,						//	RTC Alarm through EXTI Line
-		sys_irq_usb_recv,						//	USB FS Wakeup from suspend
+		default_handler,						//	USB FS Wakeup from suspend
 		default_handler,						//	TIM6
 		timer7_irq,								//	TIM7
 		};
@@ -350,13 +344,6 @@ void usage_fault_handler() {
 /*******************************************/
 /* cortex-M processor non-fault exceptions */
 /*******************************************/
-#if defined ( RTOS_DEV_EN )
-void systick_handler() {
-	ENTRY_CRITICAL();
-	sys_thread_sheduler();
-	EXIT_CRITICAL();
-}
-#else
 void systick_handler() {
 	static uint32_t div_counter = 0;
 
@@ -384,7 +371,6 @@ void systick_handler() {
 
 	task_exit_interrupt();
 }
-#endif
 
 void svc_exe(uint32_t* svc_args) {
 	volatile uint8_t svc_number;
@@ -408,58 +394,6 @@ void svc_exe(uint32_t* svc_args) {
 	default:
 		break;
 	}
-}
-
-void __attribute__ ((naked)) svc_handler() {
-	__asm volatile (
-				"tst lr, #4\n"
-				"ite eq\n"
-				"mrseq r0, msp\n"
-				"mrsne r0, psp\n"
-				"b svc_exe\n"
-				);
-}
-
-void __attribute__ ((naked)) pendsv_handler() {
-	__asm volatile(
-				/** disable interrupt */
-				" cpsid i							\n"
-
-				/** if (sys_thread_current != (sys_thread_t*)0) { */
-				" ldr  r3, =sys_thread_current		\n"
-				" ldr  r3, [r3, #0x00]				\n"
-				" cbz  r3, pendsv_restore			\n"
-
-				/** push registers r4-r11 on the stack */
-				" push {r4-r11}						\n"
-
-				/** sys_thread_current->ps = sp; */
-				" ldr  r3, =sys_thread_current		\n"
-				" ldr  r3, [r3, #0x00]				\n"
-				" str  sp, [r3, #0x00]				\n"
-				/** } */
-
-				/** sp = sys_thread_next->sp; */
-				" pendsv_restore:					\n"
-				" ldr  r2, =sys_thread_next			\n"
-				" ldr  r2, [r2, #0x00]					\n"
-				" ldr  sp, [r2, #0x00]					\n"
-
-				/** sys_thread_current = sys_thread_next */
-				" ldr  r2, =sys_thread_next			\n"
-				" ldr  r2, [r2,#0x00]					\n"
-				" ldr  r3, =sys_thread_current		\n"
-				" str  r2, [r3,#0x00]					\n"
-
-				/** pop registers r4-r11 */
-				" pop {r4-r11}						\n"
-
-				/** enable interrupt */
-				" cpsie   i							\n"
-
-				/** return to the next thread */
-				" bx      lr						\n"
-				);
 }
 
 /************************/
@@ -509,7 +443,6 @@ void exti_line15_irq() {
 	task_entry_interrupt();
 
 	if (EXTI_GetITStatus(EXTI_Line15) != RESET) {
-		sys_irq_ir_io_rev();
 		EXTI_ClearITPendingBit(EXTI_Line15);
 	}
 
@@ -520,7 +453,6 @@ void timer6_irq() {
 	task_entry_interrupt();
 
 	if (TIM_GetITStatus(TIM6, TIM_IT_Update) != RESET) {
-		sys_irq_timer_50us();
 		TIM_ClearITPendingBit(TIM6, TIM_IT_Update);
 	}
 
@@ -538,17 +470,8 @@ void timer4_irq() {
 	task_entry_interrupt();
 
 	if (TIM_GetITStatus(TIM4, TIM_IT_CC4) != RESET) {
-		sys_irq_timer_hs1101();
-		TIM_ClearITPendingBit(TIM4, TIM_IT_CC4);
+		TIM_ClearITPendingBit(TIM4, TIM_IT_CC4);	
 	}
 
-	task_exit_interrupt();
-}
-
-void usb_lp_irq() {
-	task_entry_interrupt();
-#if defined(USING_USB_MOD)
-	USB_Istr();
-#endif
 	task_exit_interrupt();
 }

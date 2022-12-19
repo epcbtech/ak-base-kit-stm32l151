@@ -27,7 +27,6 @@
 #include "led.h"
 #include "button.h"
 #include "flash.h"
-#include "hs1101.h"
 
 /* app include */
 #include "app.h"
@@ -51,7 +50,6 @@
 #include "sys_io.h"
 #include "sys_ctrl.h"
 #include "sys_dbg.h"
-#include "sys_thread.h"
 
 /* arduino include */
 #include "SPI.h"
@@ -137,10 +135,9 @@ int main_app() {
 
 	/* adc peripheral configure */
 	io_cfg_adc1();			/* configure adc for thermistor and CT sensor */
-	adc_thermistor_io_cfg();
 
 	/* adc configure for ct sensor */
-	adc_ct_io_cfg();
+	adc_bat_io_cfg();
 
 	/* flash io init */
 	flash_io_ctrl_init();
@@ -359,6 +356,7 @@ void app_start_timer() {
  * used for app tasks
  */
 void app_init_state_machine() {
+
 }
 
 /* send first message to trigger start tasks
@@ -384,29 +382,6 @@ void sys_irq_timer_10ms() {
 	button_timer_polling(&btn_mode);
 	button_timer_polling(&btn_up);
 	button_timer_polling(&btn_down);
-}
-
-/* hardware timer interrupt 50us
- * used for encode and decode ir
- */
-void sys_irq_timer_50us() {
-}
-
-/* hardware rtc interrupt alarm
- * used for internal rtc alarm
- */
-void sys_irq_timer_hs1101() {
-}
-
-/* hardware io interrupt at rev ir pin
- * used for decode ir
- */
-void sys_irq_ir_io_rev() {
-}
-
-void sys_irq_usb_recv(uint8_t* data, uint32_t len) {
-	(void)data;
-	(void)len;
 }
 
 /* init non-clear RAM objects

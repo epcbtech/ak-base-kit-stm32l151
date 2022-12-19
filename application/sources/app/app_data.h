@@ -1,5 +1,6 @@
 #ifndef __APP_DATA_H__
 #define __APP_DATA_H__
+
 #include <stdint.h>
 
 #include "sys_boot.h"
@@ -55,19 +56,6 @@ typedef struct {
 /******************************************************************************
 * RS485-MODBUS
 *******************************************************************************/
-/* global setting type */
-typedef struct t_ac_setting_info {
-	uint32_t magic_number;
-
-	uint32_t acc_buff_length;
-	uint8_t acc_checksum;
-	uint32_t udev_buff_length;
-	uint8_t udev_checksum;
-} __AK_PACKETED ac_setting_info_t;
-
-/* define settings parametters */
-#define AC_SETTING_MAGIC                    (0x1234ABCD)
-
 #if defined (TASK_MBMASTER_EN)
 extern xMBHandle xMBMMaster;
 #endif

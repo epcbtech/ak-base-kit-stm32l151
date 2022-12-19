@@ -1,16 +1,9 @@
 #ifndef __APP_FLASH_H__
 #define __APP_FLASH_H__
 
-#define APP_FLASH_IR_SECTOR_1							(0x0000)
-#define APP_FLASH_IR_SECTOR_2							(0x1000)
-
-#define APP_FLASH_LOG_SECTOR_1							(0x2000)
-#define APP_FLASH_LOG_SECTOR_2							(0x3000)
-#define APP_FLASH_LOG_SECTOR_3							(0x4000)
-
-#define APP_FLASH_DBG_SECTOR_1							(0x5000)
-
-#define APP_FLASH_FIRMWARE_INFO_SECTOR_1				(0x6000)
+#define APP_FLASH_LOG_SECTOR_1							(0x0000)
+#define APP_FLASH_LOG_SECTOR_2							(0x1000)
+#define APP_FLASH_LOG_SECTOR_3							(0x2000)
 
 #define APP_FLASH_INTTERNAL_SHARE_DATA_SECTOR_1			(0x7000)
 

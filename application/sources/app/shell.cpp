@@ -38,13 +38,10 @@
 #include "task_if.h"
 #include "task_life.h"
 
-#include "rtc.h"
 #include "led.h"
 #include "eeprom.h"
 #include "Adafruit_ssd1306syp.h"
 #include "flash.h"
-#include "hs1101.h"
-#include "exor.h"
 
 #include "qrcode.h"
 
@@ -301,6 +298,8 @@ int32_t shell_fatal(uint8_t* argv) {
 			else {
 				exe_time = t_msg.dbg_handler.stop_exe + (0xFFFFFFFF - t_msg.dbg_handler.start_exe);
 			}
+
+			sys_ctrl_delay_ms(5);
 
 			LOGIN_PRINT("index: %d\ttask_id: %d\tmsg_type:0x%x\tref_count:%d\tsig: %d\t\twait_time: %d\texe_time: %d\n"\
 						, index										\
@@ -602,30 +601,6 @@ int32_t shell_dbg(uint8_t* argv) {
 #if defined(TASK_ZIGBEE_EN)
 		task_post_pure_msg(AC_TASK_ZIGBEE_ID, AC_ZIGBEE_PERMIT_JOINING_REQ);
 #endif
-	}
-		break;
-
-	case '1': {
-	}
-		break;
-
-	case '2': {
-	}
-		break;
-
-	case '3': {
-	}
-		break;
-
-	case '4': {
-	}
-		break;
-
-	case '5': {
-	}
-		break;
-
-	case '6': {
 	}
 		break;
 

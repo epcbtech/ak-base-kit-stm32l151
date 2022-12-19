@@ -11,7 +11,6 @@
 #include "task_list.h"
 #include "task_system.h"
 
-
 void task_system(ak_msg_t* msg) {
 	switch (msg->sig) {
 	case SYSTEM_AK_FLASH_UPDATE_REQ: {
