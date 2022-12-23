@@ -19,7 +19,7 @@ extern "C"
 #include "core_cm3.h"
 #include "core_cmFunc.h"
 
-#include "../driver/eeprom/eeprom.h"
+#include "eeprom.h"
 
 /*
  * define pin for arduino pinMode/digitalWrite/digitalRead
@@ -27,7 +27,6 @@ extern "C"
  */
 #define SSD1306_CLK_PIN					(0x03)
 #define SSD1306_DATA_PIN				(0x04)
-
 
 /******************************************************************************
  *Pin map button

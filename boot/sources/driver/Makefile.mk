@@ -1,10 +1,10 @@
 CFLAGS   += -I./sources/driver/led
 CFLAGS   += -I./sources/driver/flash
-CFLAGS   += -I./sources/driver/eepprom
+CFLAGS   += -I./sources/driver/eeprom
 
 CPPFLAGS += -I./sources/driver/led
 CPPFLAGS += -I./sources/driver/flash
-CPPFLAGS += -I./sources/driver/eepprom
+CPPFLAGS += -I./sources/driver/eeprom
 
 VPATH += sources/driver/led
 VPATH += sources/driver/eeprom

@@ -1,3 +1,9 @@
+/**
+ ******************************************************************************
+ * @author: GaoKong
+ * @date:   02/11/2017
+ ******************************************************************************
+**/
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
@@ -25,7 +31,7 @@
 #include "nrf_mac.h"
 #include "nrf_phy.h"
 
-#include "../hal/hal_nrf.h"
+#include "hal_nrf.h"
 
 #define MAC_HDR_LEN				(sizeof(nrf_mac_hdr_t))
 #define MAX_MAC_PAYLOAD_LEN		(MAX_PHY_PAYLOAD_LEN - MAC_HDR_LEN - sizeof(uint8_t))

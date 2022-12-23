@@ -1,8 +1,8 @@
 #include <stdbool.h>
 #include "flash.h"
-#include "../sys/sys_ctrl.h"
-#include "../sys/sys_io.h"
-#include "../sys/sys_dbg.h"
+#include "sys_ctrl.h"
+#include "sys_io.h"
+#include "sys_dbg.h"
 
 /* WINBOND commands */
 #define WINBOND_W_EN						0x06	//write enable
@@ -87,7 +87,6 @@ uint8_t flash_wait_to_idle() {
 
 	return FLASH_DRIVER_NG;
 }
-
 
 /******************************************************************************
 * define public function

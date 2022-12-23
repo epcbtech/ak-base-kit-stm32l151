@@ -1,3 +1,9 @@
+/**
+ ******************************************************************************
+ * @author: GaoKong
+ * @date:   02/11/2017
+ ******************************************************************************
+**/
 #include <stdbool.h>
 #include <stdint.h>
 
@@ -23,7 +29,7 @@
 #include "nrf_phy.h"
 #include "nrf_data.h"
 
-#include "../hal/hal_nrf.h"
+#include "hal_nrf.h"
 
 static uint8_t pload_frame_buffer[MAX_PHY_PAYLOAD_LEN];
 

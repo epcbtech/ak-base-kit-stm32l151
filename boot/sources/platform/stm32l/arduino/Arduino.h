@@ -6,9 +6,9 @@
 #include <string.h>
 #include <math.h>
 
-#include "../../../sys/sys_ctrl.h"
-#include "../../../sys/sys_io.h"
-#include "../sys_cfg.h"
+#include "sys_ctrl.h"
+#include "sys_io.h"
+#include "sys_cfg.h"
 
 #define HIGH 0x1
 #define LOW  0x0
