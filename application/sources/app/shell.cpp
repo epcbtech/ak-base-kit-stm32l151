@@ -443,12 +443,6 @@ int32_t shell_flash(uint8_t* argv) {
 		LOGIN_PRINT("completed!\n");
 		break;
 
-	case 'r':
-		LOGIN_PRINT("flash erasing...\n");
-		flash_erase_full();
-		LOGIN_PRINT("completed\n");
-		break;
-
 	case 'd': {
 		uint8_t val;
 		uint8_t len = str_parser((char*)argv);
@@ -893,12 +887,18 @@ int32_t shell_buzzer(uint8_t* argv) {
 	}
 		break;
 
+	case '4': {
+		BUZZER_PlayTones(tones_merryChrismast);
+	}
+		break;
+
 	default:
 		LOGIN_PRINT("\n[HELP]\n");
 		LOGIN_PRINT("1. \"beep i\"                           : init buzzer play tones \n");
 		LOGIN_PRINT("2. \"beep 1\"                           : buzzer play tones startup \n");
 		LOGIN_PRINT("3. \"beep 2\"                           : buzzer play tones three beeps \n");
 		LOGIN_PRINT("4. \"beep 3\"                           : buzzer play tones super mario bros \n");
+		LOGIN_PRINT("4. \"beep 4\"                           : buzzer play tones merry chrismast \n");
 		break;
 	}
 

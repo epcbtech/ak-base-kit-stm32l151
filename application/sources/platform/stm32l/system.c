@@ -170,7 +170,7 @@ void (* const isr_vector[])() = {
 		uart1_irq,								//	USART1
 
 		#if defined (TASK_MBMASTER_EN) && defined (TASK_ZIGBEE_EN)
-		default_handler							//	USART2
+		default_handler,						//	USART2
 		#elif defined (TASK_MBMASTER_EN)
 		vMBPUSART2ISR,							//	USART2
 		#elif defined (TASK_ZIGBEE_EN)

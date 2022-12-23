@@ -40,42 +40,6 @@
 /* flash enable debug */
 #define FLASH_DBG_EN						0
 
-#if !defined USE_EXTERNAL_FLASH
-
-uint8_t flash_read(uint32_t address, uint8_t* pbuf, uint32_t len) {
-	(void)address;
-	(void)pbuf;
-	(void)len;
-	return FLASH_DRIVER_NG;
-}
-
-uint8_t flash_write(uint32_t address, uint8_t* pbuf, uint32_t len) {
-	(void)address;
-	(void)pbuf;
-	(void)len;
-	return FLASH_DRIVER_NG;
-}
-
-uint8_t flash_erase_sector(uint32_t address) {
-	(void)address;
-	return FLASH_DRIVER_NG;
-}
-
-uint8_t flash_erase_block_32k(uint32_t address) {
-	(void)address;
-	return FLASH_DRIVER_NG;
-}
-
-uint8_t flash_erase_block_64k(uint32_t address) {
-	(void)address;
-	return FLASH_DRIVER_NG;
-}
-
-uint8_t flash_erase_full() {
-	return FLASH_DRIVER_NG;
-}
-
-#else /* USE_EXTERNAL_FLASH */
 /******************************************************************************
 * declare static function
 *******************************************************************************/
@@ -96,8 +60,6 @@ void flash_set_write_enable(bool e) {
 	}
 
 	flash_cs_high();
-
-	sys_ctrl_delay_us(200);
 }
 
 uint8_t flash_wait_to_idle() {
@@ -105,15 +67,19 @@ uint8_t flash_wait_to_idle() {
 	uint32_t time_out_counter = 10000;	/* 10s */
 
 	flash_cs_low();
-	sys_ctrl_delay_us(100);
 
 	flash_transfer(WINBOND_READ_STATUS_REG_1);
 
 	do {
 		reg_1 = flash_transfer(0x00);
-		time_out_counter --;
-		sys_ctrl_delay_us(100);
-	} while ((reg_1 & 1) && time_out_counter);
+		if (reg_1 & WINBOND_SR1_BUSY_MASK) {
+			time_out_counter --;
+			sys_ctrl_delay_us(100);
+		}
+		else {
+			break;
+		}
+	} while (time_out_counter);
 
 	flash_cs_high();
 
@@ -128,12 +94,29 @@ uint8_t flash_wait_to_idle() {
 /******************************************************************************
 * define public function
 *******************************************************************************/
-uint8_t flash_read(uint32_t address, uint8_t* pbuf, uint32_t len) {
-	uint16_t i;
+uint8_t flash_is_connected() {
+	uint8_t ret = FLASH_DRIVER_NG;
 
+	flash_cs_low();
+
+	flash_transfer(WINBOND_R_JEDEC_ID);
+	if (flash_transfer(0x00) == WINBOND_WINBOND_MANUF) {
+		ret = FLASH_DRIVER_OK;
+	}
+
+	flash_cs_high();
+
+	return ret;
+}
+
+uint8_t flash_read(uint32_t address, uint8_t* pbuf, uint32_t len) {
 #if (FLASH_DBG_EN == 1)
 	SYS_DBG("[flash_read] add:0x%x\t%d\n", address, len);
 #endif
+
+	if (flash_is_connected() != FLASH_DRIVER_OK) {
+		return FLASH_DRIVER_NG;
+	}
 
 	flash_wait_to_idle();
 
@@ -145,7 +128,7 @@ uint8_t flash_read(uint32_t address, uint8_t* pbuf, uint32_t len) {
 	flash_transfer(address >> 8);
 	flash_transfer(address);
 
-	for (i = 0; i < len; i++) {
+	for(uint16_t i = 0; i < len; i++) {
 		pbuf[i] = flash_transfer(0x00);
 	}
 
@@ -159,8 +142,12 @@ uint8_t flash_write(uint32_t address, uint8_t* pbuf, uint32_t len) {
 	uint32_t pbuf_index = 0;
 
 #if (FLASH_DBG_EN == 1)
-	SYS_DBG("[flash_write] add:0x%x\t%d\n", address, len);
+	SYS_DBG("[flash_write] addr:0x%x\t%d\n", address, len);
 #endif
+
+	if (flash_is_connected() != FLASH_DRIVER_OK) {
+		return FLASH_DRIVER_NG;
+	}
 
 	while (len) {
 		if (next_page_flag) {
@@ -173,9 +160,9 @@ uint8_t flash_write(uint32_t address, uint8_t* pbuf, uint32_t len) {
 
 			flash_transfer(WINBOND_PAGE_PGM);
 
-			flash_transfer((address >> 16) & 0xff);
-			flash_transfer((address >> 8)  & 0xff);
-			flash_transfer((address >> 0)  & 0xff);
+			flash_transfer(address >> 16);
+			flash_transfer(address >> 8);
+			flash_transfer(address >> 0);
 		}
 
 		flash_transfer(pbuf[pbuf_index++]);
@@ -197,14 +184,17 @@ uint8_t flash_write(uint32_t address, uint8_t* pbuf, uint32_t len) {
 }
 
 uint8_t flash_erase_sector(uint32_t address) {
-
-	if (address % 0x1000) {
+	if (address % FLASH_SECTOR_SIZE) {
 		return FLASH_DRIVER_NG;
 	}
 
 #if (FLASH_DBG_EN == 1)
-	SYS_DBG("[flash_erase_sector] add:0x%x\n", address);
+	SYS_DBG("[flash_erase_sector] addr:0x%x\n", address);
 #endif
+
+	if (flash_is_connected() != FLASH_DRIVER_OK) {
+		return FLASH_DRIVER_NG;
+	}
 
 	flash_wait_to_idle();
 	flash_set_write_enable(true);
@@ -219,19 +209,21 @@ uint8_t flash_erase_sector(uint32_t address) {
 
 	flash_cs_high();
 
-	sys_ctrl_delay_us(200);
-
 	return flash_wait_to_idle();
 }
 
 uint8_t flash_erase_block_32k(uint32_t address) {
-	if (address % 0x8000) {
+	if (address % FLASH_BLOCK_32K_SIZE) {
 		return FLASH_DRIVER_NG;
 	}
 
 #if (FLASH_DBG_EN == 1)
-	SYS_DBG("[flash_erase_block_32k] add:0x%x\n", address);
+	SYS_DBG("[flash_erase_block_32k] addr:0x%x\n", address);
 #endif
+
+	if (flash_is_connected() != FLASH_DRIVER_OK) {
+		return FLASH_DRIVER_NG;
+	}
 
 	flash_wait_to_idle();
 	flash_set_write_enable(true);
@@ -246,19 +238,21 @@ uint8_t flash_erase_block_32k(uint32_t address) {
 
 	flash_cs_high();
 
-	sys_ctrl_delay_us(200);
-
 	return flash_wait_to_idle();
 }
 
 uint8_t flash_erase_block_64k(uint32_t address) {
-	if (address % 0x10000) {
+	if (address % FLASH_BLOCK_64K_SIZE) {
 		return FLASH_DRIVER_NG;
 	}
 
 #if (FLASH_DBG_EN == 1)
-	SYS_DBG("[flash_erase_block_64k] add:0x%x\n", address);
+	SYS_DBG("[flash_erase_block_64k] addr:0x%x\n", address);
 #endif
+
+	if (flash_is_connected() != FLASH_DRIVER_OK) {
+		return FLASH_DRIVER_NG;
+	}
 
 	flash_wait_to_idle();
 	flash_set_write_enable(true);
@@ -273,8 +267,6 @@ uint8_t flash_erase_block_64k(uint32_t address) {
 
 	flash_cs_high();
 
-	sys_ctrl_delay_us(200);
-
 	return flash_wait_to_idle();
 }
 
@@ -282,6 +274,10 @@ uint8_t  flash_erase_full() {
 #if (FLASH_DBG_EN == 1)
 	SYS_DBG("[flash_erase_full]\n");
 #endif
+
+	if (flash_is_connected() != FLASH_DRIVER_OK) {
+		return FLASH_DRIVER_NG;
+	}
 
 	flash_wait_to_idle();
 	flash_set_write_enable(true);
@@ -292,8 +288,9 @@ uint8_t  flash_erase_full() {
 
 	flash_cs_high();
 
-	sys_ctrl_delay_us(200);
-
 	return flash_wait_to_idle();
 }
-#endif /* USE_EXTERNAL_FLASH */
+
+uint8_t flash_erase_synchronous() {
+	return flash_wait_to_idle();
+}

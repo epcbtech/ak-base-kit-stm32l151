@@ -18,8 +18,7 @@
 * IF Type
 *******************************************************************************/
 /** RF24 interface for modules
- * IF_TYPE_RF24_GW using to transfer data to gateway.
- * IF_TYPE_RF24_AC using to transfer data to air_condition module.
+ *
 */
 #define IF_TYPE_RF24_MIN					(0)
 #define IF_TYPE_RF24_GW						(0)
@@ -45,13 +44,9 @@
 #define IF_TYPE_UART_GW_MAX					(140)
 
 
-#define RF24_ENCRYPT_DECRYPT_KEY_SIZE		16
-extern uint8_t rf24_encrypt_decrypt_key[];
-
 typedef struct {
 	uint8_t is_power_on_reset;
 } boot_app_share_data_t;
-
 
 /******************************************************************************
 * RS485-MODBUS

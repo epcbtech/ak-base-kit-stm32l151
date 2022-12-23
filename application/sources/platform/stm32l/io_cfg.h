@@ -27,7 +27,6 @@ extern "C"
  */
 #define SSD1306_CLK_PIN					(0x03)
 #define SSD1306_DATA_PIN				(0x04)
-
 #define SSD1306_RES_PIN					(0x08)
 
 /******************************************************************************
@@ -146,9 +145,9 @@ extern "C"
 #define USART_RS485_RX_GPIO_CLK			(RCC_AHBPeriph_GPIOA)
 #define USART_RS485_RX_SOURCE			(GPIO_PinSource2)
 
-#define RS485_TIM                      (TIM4)
-#define RS485_TIM_PERIPH               (RCC_APB1Periph_TIM4)
-#define RS485_TIM_IRQ                  (TIM4_IRQn)
+#define RS485_TIM						(TIM4)
+#define RS485_TIM_PERIPH				(RCC_APB1Periph_TIM4)
+#define RS485_TIM_IRQ					(TIM4_IRQn)
 
 /*RS485 dir IO*/
 #define RS485_DIR_IO_PIN				(GPIO_Pin_1)
@@ -191,7 +190,6 @@ extern void nrf24l01_ce_high();
 extern void nrf24l01_csn_low();
 extern void nrf24l01_csn_high();
 extern uint8_t nrf24l01_spi_rw(uint8_t);
-
 
 /******************************************************************************
 * adc function
@@ -244,7 +242,6 @@ extern void internal_flash_unlock();
 extern void internal_flash_lock();
 extern void internal_flash_erase_pages_cal(uint32_t address, uint32_t len);
 extern uint8_t internal_flash_write_cal(uint32_t address, uint8_t* data, uint32_t len);
-
 
 /******************************************************************************
 * uart2 function

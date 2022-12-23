@@ -70,9 +70,7 @@
 #include "common/mbportlayer.h"
 #endif
 
-#if defined (TASK_BEEPER_EN)
 #include "buzzer.h"
-#endif
 
 /* ----------------------- Json includes ------------------------------------*/
 //#include "json.hpp"
@@ -274,8 +272,9 @@ int main_app() {
 	/******************************************************************************
 	* run applications
 	*******************************************************************************/
-
+#if !defined(IF_LINK_UART_EN)
 	sys_ctrl_shell_sw_to_nonblock();
+#endif
 
 	return task_run();
 }

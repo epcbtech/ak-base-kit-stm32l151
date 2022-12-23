@@ -95,22 +95,6 @@ enum {
 };
 
 /*****************************************************************************/
-/*  RF24 demo task define
- */
-/*****************************************************************************/
-/* private define */
-/* define timer */
-/* define signal */
-enum {
-	AC_RF24_DEMO_INIT_NETWORK = AK_USER_DEFINE_SIG,
-	AC_RF24_DEMO_PURE_MSG_OUT,
-	AC_RF24_DEMO_COMMON_MSG_OUT,
-	AC_RF24_DEMO_PURE_MSG_IN,
-	AC_RF24_DEMO_COMMON_MSG_IN,
-};
-
-
-/*****************************************************************************/
 /* IF task define
  */
 /*****************************************************************************/
@@ -147,9 +131,11 @@ enum {
  */
 /*****************************************************************************/
 /* define timer */
-#define AC_DISPLAY_STARTUP_INTERVAL							(2000)
-#define AC_DISPLAY_LOGO_INTERVAL							(10000)
-#define AC_DISPLAY_SHOW_IDLE_BALL_MOVING_UPDATE_INTERAL		(150)
+#define AC_DISPLAY_STARTUP_INTERVAL									(2000)
+#define AC_DISPLAY_LOGO_INTERVAL									(10000)
+#define AC_DISPLAY_SHOW_IDLE_BALL_MOVING_UPDATE_INTERAL				(150)
+#define AC_DISPLAY_SHOW_MERRY_CHRISTMAS_SNOW_MOVING_UPDATE_INTERAL	(150)
+#define AC_DISPLAY_SHOW_MERRY_CHRISTMAS_SLEEP_INTERVAL				(15000)
 
 /* define signal */
 enum {
@@ -160,11 +146,10 @@ enum {
 	AC_DISPLAY_SHOW_LOGO,
 	AC_DISPLAY_SHOW_IDLE,
 	AC_DISPLAY_SHOW_IDLE_BALL_MOVING_UPDATE,
-	AC_DISPLAY_SHOW_OFF,
 	AC_DISPLAY_SHOW_FW_UPDATE,
 	AC_DISPLAY_SHOW_FW_UPDATE_ERR,
-	AC_DISPLAY_TIMEOUT_PROTECT_SCR,
-	AC_DISPLAY_UPDATE_REQ
+	AC_DISPLAY_SHOW_MERRY_CHRISTMAS_SNOW_MOVING_UPDATE,
+	AC_DISPLAY_SHOW_MERRY_CHRISTMAS_SLEEP
 };
 
 /*****************************************************************************/
@@ -181,7 +166,6 @@ enum {
 	AC_ZIGBEE_ZCL_CMD_HANDLER
 };
 
-
 /*****************************************************************************/
 /* DBG task define
  */
@@ -190,30 +174,7 @@ enum {
 /* define signal */
 enum {
 	AC_DBG_TEST_1 = AK_USER_DEFINE_SIG,
-	AC_DBG_TEST_2,
-	AC_DBG_TEST_3,
-	AC_DBG_TEST_4,
-	AC_DBG_TEST_5,
-	AC_DBG_TEST_6,
-	AC_DBG_TEST_7,
-	AC_DBG_TEST_8,
-	AC_DBG_TEST_9,
-	AC_DBG_TEST_10,
 };
-
-/*****************************************************************************/
-/*  global define variable
- */
-/*****************************************************************************/
-#define APP_OK									(0x00)
-#define APP_NG									(0x01)
-
-#define APP_FLAG_OFF							(0x00)
-#define APP_FLAG_ON								(0x01)
-
-#define AC_IGNORED									(0)
-#define AC_OK                                       (1)
-#define AC_ERROR                                    (2)
 
 /*****************************************************************************/
 /*  app function declare
