@@ -218,7 +218,7 @@ sym: $(TARGET)
 .PHONY: help
 help:
 	$(Print) "[make flash dev=/dev/tty*] burn firmware via ak bootloader"
-	$(Print) "             Note: This option is needed install ak_flash. Link download & install: https://github.com/epcbtech/ak-flash"
+	$(Print) "             Note: This option is needed install ak-flash. Link download & install: https://github.com/epcbtech/ak-flash"
 	$(Print) "             Example: make flash dev=/dev/ttyUSB0"
 	$(Print) "[make flash] burn firmware via st-link"
 	$(Print) "[make debug gdb=ddd] gdb debug using ddd"
@@ -231,7 +231,7 @@ help:
 flash: all
 	$(Print) BURNING $(TARGET:.axf=.bin) to target
 ifdef dev
-	ak_flash $(dev) $(TARGET:.axf=.bin) $(APP_START_ADDR_VAL)
+	ak-flash $(dev) $(TARGET:.axf=.bin) $(APP_START_ADDR_VAL)
 else
 	$(PROGRAMER_PATH)/STM32_Programmer.sh -c port=SWD -w $(TARGET:.axf=.bin) $(APP_START_ADDR_VAL) -rst
 endif
