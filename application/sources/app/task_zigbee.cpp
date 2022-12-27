@@ -34,7 +34,9 @@
 
 zb_znp zigbee_network(&Serial3);
 
-uint16_t control_switch_address;
+/* Biến xử lý điều khiển switch */
+uint8_t control_switch_cmd_seq = 0;
+uint16_t control_switch_address = 0;
 
 int zb_znp::zigbee_message_handler(zigbee_msg_t& zigbee_msg) {
 	/* zigbee start debug message */
@@ -124,24 +126,29 @@ int zb_znp::zigbee_message_handler(zigbee_msg_t& zigbee_msg) {
 
 	case ZDO_END_DEVICE_ANNCE_IND: {
 #if defined (DBG_ZB_FRAME_EN)
-		afIncomingMSGPacket_t* st_af_incoming_msg = (afIncomingMSGPacket_t*)zigbee_msg.data;
-		ZB_DBG("ZDO_END_DEVICE_ANNCE_IND\n");
-		ZB_DBG("\tgroup_id: %04x \n", st_af_incoming_msg->group_id);
-		ZB_DBG("\tcluster_id: %04x\n", st_af_incoming_msg->cluster_id);
-		ZB_DBG("\tsrc_addr: %04x\n", st_af_incoming_msg->src_addr);
-		ZB_DBG("\tsrc_endpoint: %x\n", st_af_incoming_msg->src_endpoint);
-		ZB_DBG("\tdst_endpoint: %x\n", st_af_incoming_msg->dst_endpoint);
-		ZB_DBG("\twas_broadcast: %x\n", st_af_incoming_msg->was_broadcast);
-		ZB_DBG("\tlink_quality: %x\n", st_af_incoming_msg->link_quality);
-		ZB_DBG("\tsecurity_use: %x\n", st_af_incoming_msg->security_use);
-		ZB_DBG("\ttime_stamp: %08x\n", st_af_incoming_msg->time_stamp);
-		ZB_DBG("\ttrans_seq_num: %x\n", st_af_incoming_msg->trans_seq_num);
-		ZB_DBG("\tlen: %d\n", st_af_incoming_msg->len);
-		ZB_DBG("\tdata: ");
-		for (int i = 0 ; i < st_af_incoming_msg->len ; i++) {
-			ZB_DBG("%02x ", st_af_incoming_msg->payload[i]);
+		ZDO_DeviceAnnce_t* ZDO_DeviceAnnce = (ZDO_DeviceAnnce_t*)zigbee_msg.data;
+		ZB_DBG("\tSrcAddr: %04x \n", ZDO_DeviceAnnce->SrcAddr);
+		ZB_DBG("\tnwkAddr: %04x \n", ZDO_DeviceAnnce->nwkAddr);
+		ZB_DBG("\textAddr: ");
+		for (int i = 0 ; i < Z_EXTADDR_LEN ; i++) {
+			xprintf("%02x ", ZDO_DeviceAnnce->extAddr[i]);
 		}
+
+		xprintf("\n");
+
 		ZB_DBG("\n");
+		/***
+			 * Specifies the MAC capabilities of the device.
+			 * Bit: 0 – Alternate PAN Coordinator
+			 * 1 – Device type: 1- ZigBee Router; 0 – End Device
+			 * 2 – Power Source: 1 Main powered
+			 * 3 – Receiver on when idle
+			 * 4 – Reserved
+			 * 5 – Reserved
+			 * 6 – Security capability
+			 * 7 – Reserved
+			 */
+		ZB_DBG("\tcapabilities: %d\n", ZDO_DeviceAnnce->capabilities);
 #endif
 	}
 		break;
@@ -187,6 +194,28 @@ void task_zigbee(ak_msg_t* msg) {
 	case AC_ZIGBEE_PERMIT_JOINING_REQ: {
 		APP_DBG_SIG("AC_ZIGBEE_PERMIT_JOINING_REQ\n");
 		zigbee_network.set_permit_joining_req(ALL_ROUTER_AND_COORDINATOR, 60, 1);
+	}
+		break;
+
+	case AC_ZIGBEE_ZCL_CONTROL_DEVICE_REQ: {
+		APP_PRINT("AC_ZIGBEE_ZCL_CONTROL_DEVICE_REQ\n");
+		uint8_t st_buffer[3] = { /* Frame control */ 0x01,
+								 /* Transaction Sequence Number */0x00,  /* control_switch_cmd_seq++ */
+								 /* Value Control */ 0x02}; /* Value Control [ 0x00:OFF , 0x01:ON , 0x02:TOOGLE ] */
+		st_buffer[1] = control_switch_cmd_seq++;
+
+		af_data_request_t st_af_data_request;
+		st_af_data_request.cluster_id    = ZCL_CLUSTER_ID_SMART_RELAY_ON_OFF;
+		st_af_data_request.dst_address   = 0x444f;
+		st_af_data_request.dst_endpoint  = 11;
+		st_af_data_request.src_endpoint  = 0x01;
+		st_af_data_request.trans_id      = 0x00;
+		st_af_data_request.options       = 0x10;
+		st_af_data_request.radius        = 0x0F;
+		st_af_data_request.len           = 3;
+		st_af_data_request.data          = st_buffer;
+
+		zigbee_network.send_af_data_req(st_af_data_request);
 	}
 		break;
 

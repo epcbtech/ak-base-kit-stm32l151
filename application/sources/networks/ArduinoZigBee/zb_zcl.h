@@ -11,6 +11,7 @@
 #define ZCL_CLUSTER_ID_GEN_GROUPS                            0x0004
 #define ZCL_CLUSTER_ID_GEN_SCENES                            0x0005
 #define ZCL_CLUSTER_ID_GEN_ON_OFF                            0x0006
+#define ZCL_CLUSTER_ID_SMART_RELAY_ON_OFF                    0x0600
 #define ZCL_CLUSTER_ID_GEN_ON_OFF_SWITCH_CONFIG              0x0007
 #define ZCL_CLUSTER_ID_GEN_LEVEL_CONTROL                     0x0008
 #define ZCL_CLUSTER_ID_GEN_ALARMS                            0x0009

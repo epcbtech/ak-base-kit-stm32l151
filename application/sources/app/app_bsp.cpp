@@ -30,6 +30,9 @@ void btn_mode_callback(void* b) {
 	case BUTTON_SW_STATE_RELEASED: {
 		APP_DBG("[btn_mode_callback] BUTTON_SW_STATE_RELEASED\n");
 		task_post_pure_msg(AC_TASK_DISPLAY_ID, AC_DISPLAY_BUTON_MODE_RELEASED);
+#if defined(TASK_ZIGBEE_EN)
+		task_post_pure_msg(AC_TASK_ZIGBEE_ID, AC_ZIGBEE_ZCL_CONTROL_DEVICE_REQ);
+#endif
 	}
 		break;
 
