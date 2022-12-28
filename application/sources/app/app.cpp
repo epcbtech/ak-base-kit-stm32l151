@@ -261,6 +261,7 @@ int main_app() {
 	APP_PRINT("start_coordinator(0)\n");
 	if (zigbee_network.start_coordinator(0) == 0) {
 		APP_PRINT("OK\n");
+		timer_set(AC_TASK_ZIGBEE_ID, AC_ZIGBEE_UTIL_GET_DEVICE_INFO_REQ, 3000, TIMER_ONE_SHOT);
 	}
 	else {
 		APP_PRINT("NG\n");

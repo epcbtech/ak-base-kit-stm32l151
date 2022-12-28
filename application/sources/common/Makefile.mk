@@ -9,6 +9,7 @@ VPATH += sources/common
 SOURCES_CPP += sources/common/view_item.cpp
 SOURCES_CPP += sources/common/view_render.cpp
 SOURCES_CPP += sources/common/screen_manager.cpp
+SOURCES_CPP += sources/common/hex.cpp
 
 SOURCES += sources/common/utils.c
 SOURCES += sources/common/xprintf.c

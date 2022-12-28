@@ -1,5 +1,6 @@
 #include "fsm.h"
 #include "port.h"
+#include "timer.h"
 #include "message.h"
 
 #include "sys_ctrl.h"
@@ -17,8 +18,11 @@
 #include "xprintf.h"
 #include "ring_buffer.h"
 
+#include "hex.h"
 #include "Arduino.h"
 #include "HardwareSerial.h"
+
+using namespace std;
 
 //https://github.com/athombv/homey/issues/2165
 //https://github.com/Frans-Willem/AqaraHub/blob/master/documentation/devices/lumi.sensor_ht.md
@@ -60,6 +64,15 @@ int zb_znp::zigbee_message_handler(zigbee_msg_t& zigbee_msg) {
 
 	case ZB_RECEIVE_DATA_INDICATION: {
 		ZB_DBG("ZB_RECEIVE_DATA_INDICATION\n");
+	}
+		break;
+
+	case UTIL_GET_DEVICE_INFO_RESPONSE: {
+		uint8_t zb_mac_string[17];
+		bytestoHexChars((uint8_t*)&zigbee_msg.data[1], 8, (uint8_t*) &zb_mac_string[0]);
+		zb_mac_string[16] = '\0';
+
+		ZB_DBG("COORDINATOR IEEEAddr: %s\n", zb_mac_string);
 	}
 		break;
 
@@ -173,6 +186,12 @@ void task_zigbee(ak_msg_t* msg) {
 		APP_DBG_SIG("AC_ZIGBEE_FORCE_START_COODINATOR\n");
 		if (zigbee_network.start_coordinator(1) == 0) {
 			ZB_DBG("force start_coordinator successfully\n");
+
+			/* Get IEEE Address of Coordinator */
+			#if defined(TASK_ZIGBEE_EN)
+					timer_set(AC_TASK_ZIGBEE_ID, AC_ZIGBEE_UTIL_GET_DEVICE_INFO_REQ, 3000, TIMER_ONE_SHOT);
+			#endif
+
 		}
 		else {
 			ZB_DBG("force start_coordinator error\n");
@@ -198,7 +217,7 @@ void task_zigbee(ak_msg_t* msg) {
 		break;
 
 	case AC_ZIGBEE_ZCL_CONTROL_DEVICE_REQ: {
-		APP_PRINT("AC_ZIGBEE_ZCL_CONTROL_DEVICE_REQ\n");
+		APP_DBG_SIG("AC_ZIGBEE_ZCL_CONTROL_DEVICE_REQ\n");
 		uint8_t st_buffer[3] = { /* Frame control */ 0x01,
 								 /* Transaction Sequence Number */0x00,  /* control_switch_cmd_seq++ */
 								 /* Value Control */ 0x02}; /* Value Control [ 0x00:OFF , 0x01:ON , 0x02:TOOGLE ] */
@@ -216,6 +235,11 @@ void task_zigbee(ak_msg_t* msg) {
 		st_af_data_request.data          = st_buffer;
 
 		zigbee_network.send_af_data_req(st_af_data_request);
+	}
+		break;
+
+	case AC_ZIGBEE_UTIL_GET_DEVICE_INFO_REQ: {
+		zigbee_network.util_get_device_info();
 	}
 		break;
 

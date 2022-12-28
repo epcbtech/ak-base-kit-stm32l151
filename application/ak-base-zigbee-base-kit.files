@@ -106,6 +106,8 @@ sources/common/container/log_queue.c
 sources/common/container/log_queue.h
 sources/common/container/ring_buffer.c
 sources/common/container/ring_buffer.h
+sources/common/hex.cpp
+sources/common/hex.h
 sources/common/screen_manager.cpp
 sources/common/screen_manager.h
 sources/common/utils.c
