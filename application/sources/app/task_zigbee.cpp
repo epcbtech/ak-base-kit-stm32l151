@@ -76,6 +76,26 @@ int zb_znp::zigbee_message_handler(zigbee_msg_t& zigbee_msg) {
 	}
 		break;
 
+	case ZDO_ACTIVE_EP_RES: {
+		APP_PRINT("ZDO_ACTIVE_EP_REQ_STATUS: %d\n", zigbee_msg.data[2]);
+	}
+		break;
+
+	case ZDO_ACTIVE_EP_RSP: {
+		APP_PRINT("ZDO_ACTIVE_EP_RSP\n");
+		APP_PRINT("Status        : %d\n", zigbee_msg.data[2]);
+		uint16_t DEVICE_ADDRESS = BUILD_UINT16(zigbee_msg.data[0], zigbee_msg.data[1]);
+		APP_PRINT("DEVICE ADDRESS: %04X\n", DEVICE_ADDRESS);
+		uint8_t ActiveEPCount = zigbee_msg.data[5];
+		APP_PRINT("ActiveEPCount : %d\n", ActiveEPCount);
+
+		for (uint8_t i = 6; i < (ActiveEPCount + 6); i++) {
+			APP_PRINT("ActiveEPList  : %d\n", zigbee_msg.data[i]);
+		}
+
+	}
+		break;
+
 	case AF_INCOMING_MSG: {
 
 		#if defined (TASK_BUZZER_EN)
@@ -240,6 +260,12 @@ void task_zigbee(ak_msg_t* msg) {
 
 	case AC_ZIGBEE_UTIL_GET_DEVICE_INFO_REQ: {
 		zigbee_network.util_get_device_info();
+	}
+		break;
+
+	case AC_ZIGBEE_ZDO_GET_ACTIVE_EP_REQ: {
+		APP_PRINT("AC_ZIGBEE_ZDO_GET_ACTIVE_EP_REQ\n");
+		zigbee_network.zdo_active_ep_req(0x444f);
 	}
 		break;
 

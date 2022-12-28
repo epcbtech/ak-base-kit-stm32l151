@@ -1219,3 +1219,33 @@ uint8_t zb_znp::zdo_simple_desc_req(uint16_t dst_addr, uint8_t dst_enpoint) {
 
 	return ZNP_RET_OK;
 }
+
+uint8_t zb_znp::zdo_active_ep_req(uint16_t dst_addr) {
+	int32_t i = 0;
+	m_znp_buf[i] = ZNP_SOF;
+	i++;
+	m_znp_buf[i] = 0;
+	i++;
+	m_znp_buf[i] = MSB(ZDO_ACTIVE_EP_REQ);
+	i++;
+	m_znp_buf[i] = LSB(ZDO_ACTIVE_EP_REQ);
+	i++;
+	m_znp_buf[i] = LSB(dst_addr); //dst_addr
+	i++;
+	m_znp_buf[i] = MSB(dst_addr); // dst_addr
+	i++;
+	m_znp_buf[i] = LSB(dst_addr); // NWKAddrOfInterest
+	i++;
+	m_znp_buf[i] = MSB(dst_addr); //NWKAddrOfInterest
+	i++;
+	m_znp_buf[1] = i - 4;
+	m_znp_buf[i] = calc_fcs((uint8_t *) &m_znp_buf[1], (i - 1));
+	i++;
+
+	if (write(m_znp_buf, i) < 0) {
+		return ZNP_RET_NG;
+	}
+
+	return ZNP_RET_OK;
+
+}

@@ -85,6 +85,9 @@
 #define ZDO_STARTUP_FROM_APP 			0x2540
 #define ZDO_IEEE_ADDR_REQ 				0x2501
 #define ZDO_SIMPLE_DESC_REQ 			0x2504
+#define ZDO_ACTIVE_EP_REQ				0x2505
+#define ZDO_ACTIVE_EP_RSP				0x4585
+#define ZDO_ACTIVE_EP_RES				0x6505
 #define ZDO_BIND_REQ					0x2521
 #define ZDO_IEEE_ADDR_RSP 				0x4581
 #define ZDO_SIMPLE_DESC_RSP				0x4584
@@ -261,6 +264,7 @@ public:
 	uint8_t zb_read_configuration(uint8_t config_id, uint8_t* rx_buffer, uint32_t* len);
 	uint8_t zdo_binding_req(binding_req_t binding_req);
 	uint8_t zdo_simple_desc_req(uint16_t dst_addr, uint8_t dst_enpoint);
+	uint8_t zdo_active_ep_req(uint16_t dst_addr);
 	uint8_t app_cnf_set_allowrejoin_tc_policy(uint8_t mode);
 	uint8_t set_panid(uint16_t pan_id);
 	uint8_t set_zigbee_device_type(uint8_t dev_type);

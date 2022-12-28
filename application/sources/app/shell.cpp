@@ -613,6 +613,9 @@ int32_t shell_dbg(uint8_t* argv) {
 		break;
 
 	case '2': {
+#if defined(TASK_ZIGBEE_EN)
+		task_post_pure_msg(AC_TASK_ZIGBEE_ID, AC_ZIGBEE_ZDO_GET_ACTIVE_EP_REQ);
+#endif
 	}
 		break;
 
