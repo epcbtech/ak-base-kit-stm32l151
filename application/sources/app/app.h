@@ -131,6 +131,7 @@ enum {
  */
 /*****************************************************************************/
 /* define timer */
+#define AC_DISPLAY_INITIAL_INTERVAL									(300)
 #define AC_DISPLAY_STARTUP_INTERVAL									(2000)
 #define AC_DISPLAY_LOGO_INTERVAL									(10000)
 #define AC_DISPLAY_SHOW_IDLE_BALL_MOVING_UPDATE_INTERAL				(150)
@@ -181,7 +182,7 @@ enum {
  */
 /*****************************************************************************/
 #define APP_MAGIC_NUMBER	0xAABBCCDD
-#define APP_VER				{0, 0, 0, 2}
+#define APP_VER				{0, 0, 0, 3}
 
 typedef struct {
 	uint32_t magic_number;

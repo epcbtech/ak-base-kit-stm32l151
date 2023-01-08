@@ -10,16 +10,6 @@
 #include <stdint.h>
 
 /*****************************************************************************/
-/* task GW_SYS define.
- */
-/*****************************************************************************/
-/* define timer */
-/* define signal */
-enum {
-	GW_SYS_WATCH_DOG_REPORT_REQ = AK_USER_DEFINE_SIG,
-};
-
-/*****************************************************************************/
 /*  task GW_RF24 define.
  */
 /*****************************************************************************/
@@ -79,8 +69,8 @@ enum {
  */
 /*****************************************************************************/
 /* define timer */
-#define GW_TIMER_FIRMWARE_PACKED_TIMEOUT_INTERVAL			(300)		/* 300ms */
-#define GW_TIMER_FIRMWARE_GET_FIRMWARE_INFO_TIMEOUT			(2000)		/* 2s */
+#define GW_TIMER_FIRMWARE_PACKED_TIMEOUT_INTERVAL			(10000)		/* 10s */
+#define GW_TIMER_FIRMWARE_GET_FIRMWARE_INFO_TIMEOUT			(10000)		/* 10s */
 #define GW_TIMER_FIRMWARE_DEV_INTERNAL_UPDATE_TIMEOUT		(180000)	/* 3' */
 
 /* define signal */
@@ -109,17 +99,7 @@ enum {
 /* define signal */
 enum {
 	GW_DEBUG_1 = AK_USER_DEFINE_SIG,
-	GW_DEBUG_2,
-	GW_DEBUG_3,
-	GW_DEBUG_4,
-	GW_DEBUG_5,
-	GW_DEBUG_6,
-	GW_DEBUG_7,
-	GW_DEBUG_8,
-	GW_DEBUG_9,
-	GW_DEBUG_10,
-	GW_DEBUG_11,
-	GW_DEBUG_12,
 };
+
 
 #endif //__APP_IF_H__

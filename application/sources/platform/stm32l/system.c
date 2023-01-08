@@ -239,8 +239,8 @@ void reset_handler() {
 	/* MUST BE disable interrupt */
 	__disable_irq();
 
-	volatile uint32_t *pSrc	= &_ldata;
-	volatile uint32_t *pDest	= &_data;
+	volatile uint32_t *pSrc = &_ldata;
+	volatile uint32_t *pDest = &_data;
 	volatile unsigned i, cnt;
 
 	/* init system */

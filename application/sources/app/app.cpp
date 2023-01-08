@@ -349,6 +349,7 @@ void app_start_timer() {
 	/* start timer to toggle life led */
 	timer_set(AC_TASK_LIFE_ID, AC_LIFE_SYSTEM_CHECK, AC_LIFE_TASK_TIMER_LED_LIFE_INTERVAL, TIMER_PERIODIC);
 	timer_set(AC_TASK_FW_ID, FW_CHECKING_REQ, FW_UPDATE_REQ_INTERVAL, TIMER_ONE_SHOT);
+	timer_set(AC_TASK_DISPLAY_ID, AC_DISPLAY_INITIAL, AC_DISPLAY_INITIAL_INTERVAL, TIMER_ONE_SHOT);
 }
 
 /* init state machine for tasks
@@ -365,7 +366,6 @@ void app_task_init() {
 	SCREEN_CTOR(&scr_mng_app, scr_startup_handle, &scr_startup);
 
 	task_post_pure_msg(AC_TASK_RF24_IF_ID, AC_RF24_IF_INIT_NETWORK);
-	task_post_pure_msg(AC_TASK_DISPLAY_ID, AC_DISPLAY_INITIAL);
 	task_post_pure_msg(AC_TASK_UART_IF_ID, AC_UART_IF_INIT);
 }
 

@@ -207,20 +207,13 @@ $(OBJECTS_DIR)/%.o: %.s
 	$(Print) AS $@
 	@$(AS) $(CFLAGS) -o $@ $<
 
-asm: $(TARGET)
-	$(Print) disassemble-all $(<:.axf=.asm)
-	@$(OBJDUMP) -D $(<) >> $(<:.axf=.asm)
-
-sym: $(TARGET)
-	$(Print) export object name $(<:.axf=.sym)
-	$(OBJNM) --size-sort --print-size $(<) >> $(<:.axf=.sym)
-
 .PHONY: help
 help:
 	$(Print) "[make flash dev=/dev/tty*] burn firmware via ak bootloader"
 	$(Print) "             Note: This option is needed install ak-flash. Link download & install: https://github.com/epcbtech/ak-flash"
 	$(Print) "             Example: make flash dev=/dev/ttyUSB0"
 	$(Print) "[make flash] burn firmware via st-link"
+	$(Print) "[make com dev=/dev/tty*] console AK Embedded Base Kit"
 	$(Print) "[make debug gdb=ddd] gdb debug using ddd"
 	$(Print) "[make debug] gdb debug"
 	$(Print) "[make clean] clean build project folder"
@@ -234,6 +227,14 @@ ifdef dev
 	ak-flash $(dev) $(TARGET:.axf=.bin) $(APP_START_ADDR_VAL)
 else
 	$(PROGRAMER_PATH)/STM32_Programmer.sh -c port=SWD -w $(TARGET:.axf=.bin) $(APP_START_ADDR_VAL) -rst
+endif
+
+.PHONY: com
+com:
+ifdef dev
+	minicom -D $(dev) -b 115200
+else
+	$(Print) "Example: make com dev=/dev/ttyUSB0"
 endif
 
 .PHONY: debug
@@ -251,3 +252,11 @@ endif
 clean:
 	$(Print) CLEAN $(OBJECTS_DIR) folder
 	@rm -rf $(OBJECTS_DIR)
+
+asm: $(TARGET)
+	$(Print) disassemble-all $(<:.axf=.asm)
+	@$(OBJDUMP) -D $(<) >> $(<:.axf=.asm)
+
+sym: $(TARGET)
+	$(Print) export object name $(<:.axf=.sym)
+	$(OBJNM) --size-sort --print-size $(<) >> $(<:.axf=.sym)
