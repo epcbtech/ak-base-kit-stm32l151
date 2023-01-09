@@ -31,6 +31,7 @@
 #include "app_flash.h"
 #include "app_eeprom.h"
 #include "app_non_clear_ram.h"
+#include "app_modbus_pull.h"
 
 #include "task_shell.h"
 #include "task_list.h"
@@ -79,6 +80,7 @@ int32_t shell_boot(uint8_t* argv);
 int32_t shell_fwu(uint8_t* argv);
 int32_t shell_psv(uint8_t* argv);
 int32_t shell_buzzer(uint8_t* argv);
+int32_t shell_modbus(uint8_t* argv);
 
 /*****************************************************************************/
 /*  command table
@@ -104,6 +106,7 @@ const cmd_line_t lgn_cmd_table[] = {
 	{(const int8_t*)"fwu",		shell_fwu,			(const int8_t*)"app burn firmware"},
 	{(const int8_t*)"psv",		shell_psv,			(const int8_t*)"psv"},
 	{(const int8_t*)"beep",		shell_buzzer,		(const int8_t*)"buzzer play tones"},
+	{(const int8_t*)"modbus",	shell_modbus,		(const int8_t*)"modbus master"},
 
 	/*************************************************************************/
 	/* debug command */
@@ -899,6 +902,35 @@ int32_t shell_buzzer(uint8_t* argv) {
 		LOGIN_PRINT("3. \"beep 2\"                           : buzzer play tones three beeps \n");
 		LOGIN_PRINT("4. \"beep 3\"                           : buzzer play tones super mario bros \n");
 		LOGIN_PRINT("4. \"beep 4\"                           : buzzer play tones merry chrismast \n");
+		break;
+	}
+
+	return 0;
+}
+
+int32_t shell_modbus(uint8_t* argv) {
+	switch (*(argv + 7)) {
+	case 'r':
+		LOGIN_PRINT("Modbus polling all register: \n");
+		updateDataModbusDevice(&MB_ES35SW_TH_Sensor);
+		LOGIN_PRINT("--ES35-SW--\n");
+		for (uint16_t i = 0; i < MB_ES35SW_TH_Sensor.listRegAmount; i++) {
+			LOGIN_PRINT("regAddr[%d]: %d\t", i+1, MB_ES35SW_TH_Sensor.listRegDevice[i].regAddress);
+			LOGIN_PRINT("\trawValue: %d \n", MB_ES35SW_TH_Sensor.listRegDevice[i].regValue);
+		}
+
+		LOGIN_PRINT("\n--LHIO404--\n");
+		updateDataModbusDevice(&MB_LHIO404_IO_Device);
+		for (uint16_t i = 0; i < MB_LHIO404_IO_Device.listRegAmount; i++) {
+			LOGIN_PRINT("regAddr[%d]: %d\t", i+1, MB_LHIO404_IO_Device.listRegDevice[i].regAddress);
+			LOGIN_PRINT("\trawValue: %d \n", MB_LHIO404_IO_Device.listRegDevice[i].regValue);
+		}
+		LOGIN_PRINT("\nDone !\n");
+		break;
+
+	default:
+		LOGIN_PRINT("\n[HELP]\n");
+		LOGIN_PRINT("\nmodbus r\"            : read all register\n");
 		break;
 	}
 

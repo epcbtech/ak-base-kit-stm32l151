@@ -84,6 +84,11 @@ void BUZZER_Init(void) {
 
 	/* BUZZER TIM enable counter */
 	TIM_Cmd(BUZZER_TIM, ENABLE);
+
+	/* BUZZER disable */
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AN;
+	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
+	GPIO_Init(BUZZER_IO_PORT, &GPIO_InitStructure);
 }
 
 // Turn on buzzer with specified frequency
