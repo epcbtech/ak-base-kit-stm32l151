@@ -124,14 +124,15 @@ int zb_znp::zigbee_message_handler(zigbee_msg_t& zigbee_msg) {
 		ZB_DBG("AF_INCOMING_MSG:\n");
 		ZB_DBG("\tgroup_id: %04x \n", st_af_incoming_msg->group_id);
 		ZB_DBG("\tcluster_id: %04x\n", st_af_incoming_msg->cluster_id);
-		ZB_DBG("\tsrc_addr: %04x\n", st_af_incoming_msg->src_addr);
+		ZB_DBG("\tsrc_addr_hex: %04x\n", st_af_incoming_msg->src_addr);
+		ZB_DBG("\tsrc_addr_dec: %d\n", st_af_incoming_msg->src_addr);
 		ZB_DBG("\tsrc_endpoint: %x\n", st_af_incoming_msg->src_endpoint);
 		ZB_DBG("\tdst_endpoint: %x\n", st_af_incoming_msg->dst_endpoint);
 		ZB_DBG("\twas_broadcast: %x\n", st_af_incoming_msg->was_broadcast);
-		ZB_DBG("\tlink_quality: %x\n", st_af_incoming_msg->link_quality);
-		ZB_DBG("\tsecurity_use: %x\n", st_af_incoming_msg->security_use);
+        ZB_DBG("\tlink_quality: %d\n", st_af_incoming_msg->link_quality);
+        ZB_DBG("\tsecurity_use: %d\n", st_af_incoming_msg->security_use);
 		ZB_DBG("\ttime_stamp: %08x\n", st_af_incoming_msg->time_stamp);
-		ZB_DBG("\ttrans_seq_num: %x\n", st_af_incoming_msg->trans_seq_num);
+        ZB_DBG("\ttrans_seq_num: %d\n", st_af_incoming_msg->trans_seq_num);
 		ZB_DBG("\tlen: %d\n", st_af_incoming_msg->len);
 		ZB_DBG("\tdata: ");
 		for (int i = 0 ; i < st_af_incoming_msg->len ; i++) {
@@ -238,15 +239,20 @@ void task_zigbee(ak_msg_t* msg) {
 
 	case AC_ZIGBEE_ZCL_CONTROL_DEVICE_REQ: {
 		APP_DBG_SIG("AC_ZIGBEE_ZCL_CONTROL_DEVICE_REQ\n");
+
+		uint16_t srcAddress = *(uint16_t*)get_data_common_msg(msg);
+		APP_PRINT("[AC_ZIGBEE_ZDO_GET_ACTIVE_EP_REQ] srcAddress: %d\n", srcAddress);
+
 		uint8_t st_buffer[3] = { /* Frame control */ 0x01,
 								 /* Transaction Sequence Number */0x00,  /* control_switch_cmd_seq++ */
 								 /* Value Control */ 0x02}; /* Value Control [ 0x00:OFF , 0x01:ON , 0x02:TOOGLE ] */
 		st_buffer[1] = control_switch_cmd_seq++;
 
 		af_data_request_t st_af_data_request;
-		st_af_data_request.cluster_id    = ZCL_CLUSTER_ID_SMART_RELAY_ON_OFF;
-		st_af_data_request.dst_address   = 0x444f;
-		st_af_data_request.dst_endpoint  = 11;
+		// st_af_data_request.cluster_id    = ZCL_CLUSTER_ID_SMART_RELAY_ON_OFF;
+		st_af_data_request.cluster_id    = 0x0000;
+        st_af_data_request.dst_address   = srcAddress;
+        st_af_data_request.dst_endpoint  = 1;
 		st_af_data_request.src_endpoint  = 0x01;
 		st_af_data_request.trans_id      = 0x00;
 		st_af_data_request.options       = 0x10;
@@ -265,7 +271,10 @@ void task_zigbee(ak_msg_t* msg) {
 
 	case AC_ZIGBEE_ZDO_GET_ACTIVE_EP_REQ: {
 		APP_PRINT("AC_ZIGBEE_ZDO_GET_ACTIVE_EP_REQ\n");
-		zigbee_network.zdo_active_ep_req(0x444f);
+		uint16_t srcAddress = *(uint16_t*)get_data_common_msg(msg);
+		APP_PRINT("[AC_ZIGBEE_ZDO_GET_ACTIVE_EP_REQ] srcAddress: %d\n", srcAddress);
+
+		zigbee_network.zdo_active_ep_req(srcAddress);
 	}
 		break;
 

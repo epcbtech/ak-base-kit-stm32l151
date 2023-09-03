@@ -22,7 +22,7 @@ APP_START_ADDR_VAL = 0x08003000
 APP_ADDR_OPTION = -DAPP_START_ADDR=$(APP_START_ADDR_VAL)
 
 # Define console baudrate, that is used to configure UART.
-SYS_CONSOLE_BAUDRATE = 115200
+SYS_CONSOLE_BAUDRATE = 460800
 CONSOLE_BAUDRATE_DEF = -DSYS_CONSOLE_BAUDRATE=$(SYS_CONSOLE_BAUDRATE)
 
 #|---------------------------------------------------------------------------------------------------|

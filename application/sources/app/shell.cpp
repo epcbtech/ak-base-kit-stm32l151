@@ -614,12 +614,23 @@ int32_t shell_dbg(uint8_t* argv) {
 
 	case '2': {
 #if defined(TASK_ZIGBEE_EN)
-		task_post_pure_msg(AC_TASK_ZIGBEE_ID, AC_ZIGBEE_ZDO_GET_ACTIVE_EP_REQ);
+		uint8_t len_cmd = str_parser((char*)argv);
+		APP_PRINT("len_cmd: %d\n", len_cmd);
+		uint16_t srcAddress = atoi(str_parser_get_attr(2));
+		APP_PRINT("srcAddress: %d\n", srcAddress);
+		task_post_common_msg(AC_TASK_ZIGBEE_ID, AC_ZIGBEE_ZDO_GET_ACTIVE_EP_REQ, (uint8_t*)&srcAddress, sizeof(uint16_t));
 #endif
 	}
 		break;
 
 	case '3': {
+#if defined(TASK_ZIGBEE_EN)
+		uint8_t len_cmd = str_parser((char*)argv);
+		APP_PRINT("len_cmd: %d\n", len_cmd);
+		uint16_t srcAddress = atoi(str_parser_get_attr(2));
+		APP_PRINT("srcAddress: %d\n", srcAddress);
+        task_post_common_msg(AC_TASK_ZIGBEE_ID, AC_ZIGBEE_ZCL_CONTROL_DEVICE_REQ, (uint8_t*)&srcAddress, sizeof(uint16_t));
+#endif
 	}
 		break;
 
